@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    local("Pixel Operator"), local("pixel-operator-font"), local("pixel_operator"),
+    url(pixel-operator-font/PixelOperator-Bold.ttf) format("opentype");
+}
+
 body {
     background-color: black;
     color: white;
-    margin: 10px;
+    margin: 20px 30px;
+    font-family: "Pixel Operator", sans-serif;
 }
