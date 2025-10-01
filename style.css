@@ -1,6 +1,18 @@
+*{
+    font-family: /*will be undertale font*/
+}
+
 .footer
 {
     background-color: rgb(0, 0, 0);
     width: 100%
     color: white;
+}
+
+.body {
+      cursor: url(img/cursor-heart.png), default;
+}
+
+a {
+    cursor: url(img/cursor-selecting.png), pointer;
 }

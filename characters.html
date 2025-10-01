@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERTALE-SE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+                crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="characters.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body class="body" style="background-color: rgb(0, 0, 0);">
+    <div class="container-lg">
+
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+            <!--lg = large breakpoint (based on screen resolution and resizes based on screen size), navbar-dark = makes text light-->
+            
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src = "img/na" alt = "Sans Face" class="d-inline-block align-text-top w-5" id="image-logo">
+                </a>
+
+                <!--Hamburger Icon Menu Button-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <!--Collapsible navbar menu with custom hover underline USS animation-->
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <!--links to the hamburger menu button-->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="culture.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Cultural Impact</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="characters.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Characters</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="mech.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Game Mechanics</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="music.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Music</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="story.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Story</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--About the Team-->
+        <section class="characters">
+            <div class="conatiner">
+                <br>    <!--Line break-->
+                <h1 class="about-team text-center about-team" style="color: white;">Characters</h1>
+                <hr><br>    <!--Horizontal Line and line break-->
+
+                <!--Card organized in 2 x 2 table format-->
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                    <div class="container my-4">
+                        <div class="card" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#cardText">
+                            <img src="img/frisk_char.png" class="frisk img-fluid card-img-top" style="width:250px; margin:auto;" alt="Frisk Character Image">
+                            <div class="card-body">
+                                <h4 class="text-center card-title">Protagonist</h4>
+                                <h5 class="text-center card-text">Frisk</h5>
+                            </div>
+                        </div>
+                      
+                        <!-- Collapsible content -->
+                        <div id="cardText" class="collapse">
+                          <div class="card card-body mt-2">
+                            <ul>
+                                <li>Stuff About character</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div> <!--Closing tag for row-->
+                <br>
+            </div> <!--Closing tag for container-->
+        </section>
+
+         <!--footer (need bootstrap icon)-->
+       <footer class="p-5 footer text-light text-center position-relative" id="web-footer">
+            <div class="container">
+                <p class="lead">Copyright &copy; UNDERTALE&trade;</p>
+                <p>Game by Toby Fox and Temmie Chang</p>
+                <p>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</p>
+                <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                    <i class="bi bi-caret-up-square h2 icon-white"></i>
+                    <!--<i class="bi bi-arrow-up-circle h2 icon-white"></i>-->
+                </a>
+            </div>
+       </footer>
+        
+    </div>
+    
+</body>
+</html>
+<!--RAHH-->
