@@ -6,3 +6,9 @@ a.custom-link:active,
 a.custom-link:focus {
   color: #ffff00 !important;
 }
+
+
+@font-face {
+    font-family: 'Undretale font'; /* Choose a unique name for your font */
+    src: url('PixelOperator-Bold.ttf') format('truetype');
+}
