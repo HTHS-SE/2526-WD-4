@@ -11,3 +11,24 @@ body {
     margin: 20px 30px;
     font-family: "Pixel Operator", sans-serif;
 }
+
+.flex-nav-items {
+  display: inline-flex;
+  list-style-type: none;
+  align-items: right;
+  font-size: 20px;
+}
+
+.nav-list-item {
+  margin: 0px 10px;
+  text-align: center;
+  width: 175px;
+  border: 2px solid white;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.nav-list-item:hover {
+  color: yellow;
+  border: 2px solid yellow;
+}
