@@ -12,23 +12,37 @@ body {
     font-family: "Pixel Operator", sans-serif;
 }
 
-.flex-nav-items {
+.flex-nav-items { /*for unordered list of items in navbar*/
   display: inline-flex;
   list-style-type: none;
   align-items: right;
   font-size: 20px;
 }
 
-.nav-list-item {
+.nav-list-item { /*for each item in the navbar*/
   margin: 0px 10px;
+  padding: 10px;
   text-align: center;
-  width: 175px;
+  align-content: center;
   border: 2px solid white;
   border-radius: 3px;
   font-size: 20px;
 }
 
-.nav-list-item:hover {
+.nav-list-item:hover { /*for each item in the navbar when hovered over*/
   color: yellow;
   border: 2px solid yellow;
+}
+
+#navmenu { /*entire collapsible navbar*/
+  justify-content: right;
+}
+
+@media only screen and (max-width: 5000px) {
+  .flex-nav-items { /*for unordered list of items in navbar*/
+    display: flex;
+    list-style-type: none;
+    align-items: left;
+    font-size: 20px;
+}
 }
