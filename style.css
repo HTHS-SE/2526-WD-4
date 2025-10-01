@@ -16,3 +16,9 @@
 a {
     cursor: url(img/cursor-selecting.png), pointer;
 }
+
+.game-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
