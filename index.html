@@ -19,62 +19,59 @@
 <body class="body">
    <div class="container-lg">
 
+    
+
       <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
-            <!--lg = large breakpoint (based on screen resolution and resizes based on screen size), navbar-dark = makes text light-->
-            
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <img src = "img/na" alt = "Sans Face" class="d-inline-block align-text-top w-5" id="image-logo">
-                </a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+        <!--lg = large breakpoint, navbar-dark = light text-->
+        <div class="container">
+            <a href="index.html" class="navbar-brand" id="sans-logo">
+                <img src="lizzie-img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top w-50">
+            </a>
+                
+            <!--hamburger menu button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!--Hamburger Icon Menu Button-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-
-                <!--Collapsible navbar menu with custom hover underline USS animation-->
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <!--links to the hamburger menu button-->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="culture.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Cultural Impact</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a href="characters.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Characters</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a href="mech.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Game Mechanics</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="music.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Music</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="story.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Story</a>
-                        </li>
-                    </ul>
-                </div>
+            <!--collapsible navbar menu w/custom hover underline CSS animation-->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!--links to hamburger menu button-->
+                <ul class="nav-item flex-nav-items navbar-nav ms-auto">
+                    <li class="nav-list-item">
+                        <a href="mech.html" class="nav-link hover-underline-animation">GAME MECHANICS</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="story.html" class="nav-link hover-underline-animation">STORY</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="characters.html" class="nav-link">CHARACTERS</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="music.html" class="nav-link hover-underline-animation">MUSIC</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="culture.html" class="nav-link hover-underline-animation">CULTURAL IMPACT</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
 
       <!--video game window-->
+      <br>
         <div class="game-window">
             <iframe src="https://ut10-battle.undertale.com/"
             width="800" 
             height="600" 
-            style="border:3px solid rgb(255, 255, 255);">
+            style="border:4px solid rgb(255, 255, 255);">
             </iframe>
-
-            <h5>Original game link: https://ut10-battle.undertale.com/</h5>
+            <br>
+            <h5><a href="https://ut10-battle.undertale.com/" target="_blank">Link to minigame</a></h5>
         </div>
+        <br>
+        <br>
        <!--footer (need bootstrap icon)-->
        <footer class="p-5 footer text-light text-center position-relative">
             <div class="container">
