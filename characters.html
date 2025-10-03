@@ -9,11 +9,14 @@
                 crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/characters.css"> 
+    <link rel="stylesheet" href="styles.css"> 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </head>
 <body class="body" style="background-color: rgb(0, 0, 0);">
     <div class="container-lg">
@@ -24,51 +27,44 @@
         <audio autoplay loop src="ASGORE.mp3">
         </audio>
 
+    
 
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
-            <!--lg = large breakpoint (based on screen resolution and resizes based on screen size), navbar-dark = makes text light-->
-            
-            <div class="container">
-                <a href="index.html" class="navbar-brand">
-                    <img src = "img/na" alt = "Sans Face" class="d-inline-block align-text-top w-5" id="image-logo">
-                </a>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!--lg = large breakpoint, navbar-dark = light text-->
+        <div class="container">
+            <a href="index.html" class="navbar-brand" id="sans-logo">
+                <img src="lizzie-img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top w-50">
+            </a>
+                
+            <!--hamburger menu button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!--Hamburger Icon Menu Button-->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-
-                <!--Collapsible navbar menu with custom hover underline USS animation-->
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <!--links to the hamburger menu button-->
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="culture.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Cultural Impact</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a href="characters.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Characters</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a href="mech.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Game Mechanics</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="music.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Music</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="story.html" class="nav-link hover-underline-animation nav-bar nbMenuItem">Story</a>
-                        </li>
-                    </ul>
-                </div>
+            <!--collapsible navbar menu w/custom hover underline CSS animation-->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!--links to hamburger menu button-->
+                <ul class="nav-item flex-nav-items navbar-nav ms-auto">
+                    <li class="nav-list-item">
+                        <a href="mech.html" class="nav-link hover-underline-animation">GAME MECHANICS</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="story.html" class="nav-link hover-underline-animation">STORY</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="characters.html" class="nav-link">CHARACTERS</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="music.html" class="nav-link hover-underline-animation">MUSIC</a>
+                    </li>
+                    <li class="nav-item nav-list-item">
+                        <a href="culture.html" class="nav-link hover-underline-animation">CULTURAL IMPACT</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
         <!--About Characters-->
         <section class="characters">
@@ -80,50 +76,62 @@
                 <!--Card organized in 2 x 2 table format-->
                 <div class="row row-cols-1 row-cols-md-2 g-4">
 
-                    <!--Keep code for now, delete in future (card code)-->
-                    <!--Test for JUST Card-->
-                    <div class="container my-4">
-                        <div class="card" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#cardText">
-                            <img src="img/frisk_char.png" class="frisk img-fluid card-img-top" style="width:250px; margin:auto;" alt="Frisk Character Image">
-                            <div class="card-body">
-                                <h4 class="text-center card-title">Protagonist</h4>
-                                <h5 class="text-center card-text">Frisk</h5>
-                            </div>
-                        </div>
-                      
-                        <!-- Collapsible content -->
-                        <div id="cardText" class="collapse">
-                          <div class="card card-body mt-2">
-                            <ul>
-                                <li>Stuff About character</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!--TEST For Popout-->
-                    <!--ISSUE: After exiting card, the link turns black, making it hard to see to user-->
+                    <!--Popout Code-->
+                    <!--Frisk-->
                     <p>
-                        <a class="custom-link" data-bs-toggle="offcanvas" href="#infoCard" role="button" 
+                        <a class="custom-link" data-bs-toggle="offcanvas" href="#infoCardFrisk" role="button" 
                         aria-controls="infoCard">Frisk</a>
                     </p>
-                    
                       <!-- Offcanvas Card -->
-                      <div class="offcanvas offcanvas-end" tabindex="-1" id="infoCard" aria-labelledby="infoCardLabel">
-                        <div class="offcanvas-header">
-                          <h5 class="offcanvas-title" id="infoCardLabel">Frisk</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                          <div class="card shadow">
-                            <img src="img/frisk_char.png" class="frisk img-fluid card-img-top" style="width:250px; margin:auto;" alt="Frisk Character Image">
-                            <div class="card-body">
-                              <h5 class="card-title">Protagonist</h5>
-                              <p class="card-text">Info About Character</p>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="infoCardFrisk" aria-labelledby="infoCardLabel">
+                            <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="infoCardLabel">Frisk</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                          </div>
-                        </div>   
+                            <div class="offcanvas-body">
+                            <div class="card shadow">
+                                <img src="img/frisk_char.png" class="frisk img-fluid card-img-top" style="width:250px; margin:auto;" alt="Frisk Character Image">
+                                <div class="card-body">
+                                <h5 class="card-title">Protagonist</h5>
+                                <p class="card-text">Info About Character</p>
+                                <ul class="card-text">
+                                    <li>Character you play in game</li>
+                                    <li>Has a red colored soul</li>
+                                    <li>Soul represents DETERMINATION</li>
+                                    <li>Refered to as "Kid", "Human", or "Child" in game</li>
+                                    <li>Doesn't have any spoken dialogue in</li>
+                                </ul>
+                                </div>
+                            </div>
+                            </div>  
+                        </div>
+
+                    
+                    <!--Popout Code-->
+                    <!--Flowey-->
+                    <p>
+                        <a class="custom-link" data-bs-toggle="offcanvas" href="#infoCardFlowey" role="button" 
+                        aria-controls="infoCard">Flowey</a>
+                    </p>
+                      <!-- Offcanvas Card -->
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="infoCardFlowey" aria-labelledby="infoCardLabel">
+                            <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="infoCardLabel">Flowey</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                            <div class="card shadow">
+                                <img src="img/Flowey.png" class="flowey img-fluid card-img-top" style="width:250px; margin:auto;" alt="Flowey Character Image">
+                                <div class="card-body">
+                                <h5 class="card-title">Antagonist</h5>
+                                <p class="card-text">Info About Character</p>
+                                <ul class="card-text">
+                                    <li>Info about character</li>
+                                </ul>
+                                </div>
+                            </div>
+                            </div>  
+                        </div>
                 </div>
                 </div> <!--Closing tag for row-->
                 <br>

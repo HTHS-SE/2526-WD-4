@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Undretale font'; /* Choose a unique name for your font */
+    font-family: 'Undretale font';
     src: url('PixelOperator-Bold.ttf') format('truetype');
 }
 
@@ -9,14 +9,25 @@ a.custom-link{
 
 a.custom-link {
     color: white; /* default color */
-    font-size: 30px;
+    font-size: 50px;
     text-decoration: none; /* optional: removes underline */
 }
   
 a.custom-link:hover,
 a.custom-link:focus {
     color: yellow; /* hover/focus color */
-    font-size: 30px;
+    font-size: 50px;
     text-decoration: underline; /* optional: show underline on hover */
 }
   
+body{
+    font-family: 'Undertale font';
+}
+
+.card-title{
+    font-size: 50px;
+}
+
+p.card-text{
+    font-size: 20px;
+}
