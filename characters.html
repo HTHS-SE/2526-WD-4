@@ -19,6 +19,12 @@
     <div class="container-lg">
 
 
+        <!--BG music-->
+        <!--We can have BG music on all tabs but the index one (the background music in the game will play alongside the bg music of the site)-->
+        <audio autoplay loop src="ASGORE.mp3">
+        </audio>
+
+
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
             <!--lg = large breakpoint (based on screen resolution and resizes based on screen size), navbar-dark = makes text light-->
@@ -100,20 +106,21 @@
                     <!--ISSUE: After exiting card, the link turns black, making it hard to see to user-->
                     <p>
                         <a class="custom-link" data-bs-toggle="offcanvas" href="#infoCard" role="button" 
-                        aria-controls="infoCard">Click this!</a>
+                        aria-controls="infoCard">Frisk</a>
                     </p>
                     
                       <!-- Offcanvas Card -->
                       <div class="offcanvas offcanvas-end" tabindex="-1" id="infoCard" aria-labelledby="infoCardLabel">
                         <div class="offcanvas-header">
-                          <h5 class="offcanvas-title" id="infoCardLabel">More Info</h5>
+                          <h5 class="offcanvas-title" id="infoCardLabel">Frisk</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                           <div class="card shadow">
+                            <img src="img/frisk_char.png" class="frisk img-fluid card-img-top" style="width:250px; margin:auto;" alt="Frisk Character Image">
                             <div class="card-body">
-                              <h5 class="card-title">Hello!</h5>
-                              <p class="card-text">This is a card that popped out when you clicked the text.</p>
+                              <h5 class="card-title">Protagonist</h5>
+                              <p class="card-text">Info About Character</p>
                             </div>
                           </div>
                         </div>   
