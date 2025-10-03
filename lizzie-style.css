@@ -5,11 +5,13 @@
     url(pixel-operator-font/PixelOperator-Bold.ttf) format("opentype");
 }
 
-body {
-    background-color: black;
-    color: white;
-    margin: 20px 30px;
-    font-family: "Pixel Operator", sans-serif;
+@font-face {
+	font-family:Mercy;
+	src:url("fonts/mercy/MERCY.eot?") format("eot"),url("fonts/mercy/MERCY.woff") format("woff"),url("fonts/mercy/MERCY.otf") format("opentype");
+}
+
+*{
+    font-family: "Pixel Operator";
 }
 
 .flex-nav-items { /*for unordered list of items in navbar*/
@@ -21,28 +23,63 @@ body {
 
 .nav-list-item { /*for each item in the navbar*/
   margin: 0px 10px;
-  padding: 10px;
+  padding: 4px;
   text-align: center;
   align-content: center;
-  border: 2px solid white;
+  border: 2px solid orange;
   border-radius: 3px;
-  font-size: 20px;
+}
+
+.nav-list-item a {
+  color: orange;
+  font-family: Mercy, "Pixel Operator";
+  font-size: 30px;
 }
 
 .nav-list-item:hover { /*for each item in the navbar when hovered over*/
-  color: yellow;
-  border: 2px solid yellow;
+  border: 2px solid #ffff00;
+}
+
+a:hover {
+  color: #ffff00;
 }
 
 #navmenu { /*entire collapsible navbar*/
   justify-content: right;
 }
 
-@media only screen and (max-width: 5000px) {
-  .flex-nav-items { /*for unordered list of items in navbar*/
-    display: flex;
-    list-style-type: none;
-    align-items: left;
-    font-size: 20px;
+
+a {
+  cursor: url(img/cursor-selecting.png) 2 2, pointer;
 }
+
+.game-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: yellow;
+    font-family:"Pixel Operator";
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 20px 30px;
+  font-family: "Mercy", "Pixel Operator", sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+
+.card {
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.card-img-left {
+  justify-content: left;
 }
