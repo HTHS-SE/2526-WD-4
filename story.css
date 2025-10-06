@@ -28,7 +28,29 @@
 
 /* --- STORY PAGE --- */
 
+body{
+  text-align:center;
+}
 
-.story-link{
-  font-size: 30px;
+a.clink {
+  display: inline-block;
+  padding: 40px 50px;
+}
+
+p.links{
+  text-align: center;
+}
+
+h1.paths{
+  text-align:center;
+  font-size: 60px;
+}
+
+h1.title{
+  text-align:center;
+  font-size:80px;
+}
+
+p.about{
+  font-size: 25px;
 }
