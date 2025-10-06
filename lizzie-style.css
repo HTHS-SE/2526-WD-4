@@ -81,7 +81,8 @@ p {
 }
 
 .card-inline-parts {
-  display: inline-block;
+  display: inline;
+  border: 1px solid black;
 }
 
 .play-button {
@@ -91,6 +92,10 @@ p {
 }
 
 .play-icon {
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.card-text-part {
+  margin-left: 100px;
 }
