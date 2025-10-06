@@ -88,9 +88,18 @@ p.card-text{
 .close-btn:hover { color: #fff; }
 
 /* images inside popouts */
-.popup img { display:block; margin: 18px auto; max-width: 260px; width:100%; height: auto; }
+.popup img { 
+  display:block; 
+  margin: 18px auto; 
+  max-width: 260px; 
+  width:100%; 
+  height: auto; 
+}
 
 /* small-screen tweak */
 @media (max-width: 520px) {
-  .offcanvas-panel { width: 100%; right: -100%; }
+  .offcanvas-panel { 
+    width: 100%; 
+    right: -100%; 
+  }
 }
