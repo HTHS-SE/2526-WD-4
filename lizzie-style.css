@@ -67,7 +67,7 @@ a {
 body {
   background-color: black;
   color: white;
-  margin: 20px 30px;
+  margin: 20px 50px;
   font-family: "Mercy", "Pixel Operator", sans-serif;
 }
 
@@ -80,6 +80,17 @@ p {
   background-color: white;
 }
 
-.card-img-left {
+.card-inline-parts {
+  display: inline-block;
+}
+
+.play-button {
+  width: 50px;
+  height: 50px;
   justify-content: left;
+}
+
+.play-icon {
+  justify-content: center;
+  align-content: center;
 }
