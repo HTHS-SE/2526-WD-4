@@ -81,8 +81,8 @@ p {
 }
 
 .card-inline-parts {
-  display: inline;
   border: 1px solid black;
+  display: inline-grid;
 }
 
 .play-button {
@@ -97,5 +97,6 @@ p {
 }
 
 .card-text-part {
-  margin-left: 100px;
+  justify-content: right;
+  width: 500px;
 }
