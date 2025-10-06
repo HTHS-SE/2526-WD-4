@@ -1,3 +1,5 @@
+/*for general page setup, index, and mechanics */
+
 @font-face {
   font-family: "Pixel Operator";
   src:
@@ -5,7 +7,7 @@
     url(pixel-operator-font/PixelOperator-Bold.ttf) format("opentype");
 }
 
-@font-face {
+@font-face /*font for buttons of navbar */{
 	font-family:Mercy;
 	src:url("fonts/mercy/MERCY.eot?") format("eot"),url("fonts/mercy/MERCY.woff") format("woff"),url("fonts/mercy/MERCY.otf") format("opentype");
 }
@@ -33,8 +35,7 @@ body {
   padding: 4px;
   text-align: center;
   align-content: center;
-  border: 2px solid orange;
-  border-radius: 3px;
+  border: 4px solid orange;
 }
 
 .nav-list-item a {
@@ -44,12 +45,9 @@ body {
 }
 
 .nav-list-item:hover { /*for each item in the navbar when hovered over*/
-  border: 2px solid #ffff00;
+  border: 4px solid #ffff00;
 }
 
-a:hover {
-  color: #ffff00;
-}
 
 #navmenu { /*entire collapsible navbar*/
   justify-content: right;
@@ -93,3 +91,6 @@ a {
     font-family:"Pixel Operator";
 }
 
+.nav-list-item a:hover {
+  color: #ffff00;
+}
