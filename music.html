@@ -68,9 +68,33 @@
     <!--song cards-->
     <section>
         <div class="container song-grid">
-            <audio id="megalovania" src="megalovania.wav" preload="auto"></audio> <!--song 1 button-->
+            <audio id="undertale" src="audio/undertale.wav" preload="auto"></audio> <!--undertale button-->
             <div class="play-pause-stack">
-                <button class="play-button h1" onclick="document.getElementById('megalovania').play();">
+                <button class="play-button h1" onclick="
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('undertale').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('undertale').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+
+            <div class="card desc-card h1"> <!--undertale desc card-->
+                <h4>Undertale</h4>
+                <h5>#071</h5>
+                <p>Plays in all routes as the protagonist explores New Home.</p>
+            </div>
+            
+            <audio id="megalovania" src="audio/megalovania.wav" preload="auto"></audio> <!--megalovania button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('megalovania').play();
+                ">
                     <i class="bi bi-play-circle-fill"></i>
                 </button>
                 <button class="pause-button h1" onclick="document.getElementById('megalovania').pause();">
@@ -78,42 +102,30 @@
                 </button>
             </div>
             
-            <div class="card desc-card h1"> <!--desc card for song 1-->
+            <div class="card desc-card h1"> <!--megalovania desc card-->
                 <h4>MEGALOVANIA</h4>
-                <h5>Subheading</h5>
-                <p>description text description text description text description text description text description text</p>
+                <h5>#100</h5>
+                <p>Perhaps the most recognizable track from Undertale. Plays in the genocide route during the Sans final battle.</p>
             </div>
 
-            <audio id="megalovania" src="megalovania.wav" preload="auto"></audio> <!--song 1 button-->
+            <audio id="hopes-and-dreams" src="audio/hopes-and-dreams.wav" preload="auto"></audio> <!--song 3 button-->
             <div class="play-pause-stack">
-                <button class="play-button h1" onclick="document.getElementById('megalovania').play();">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('hopes-and-dreams').play();
+                ">
                     <i class="bi bi-play-circle-fill"></i>
                 </button>
-                <button class="pause-button h1" onclick="document.getElementById('megalovania').pause();">
-                    <i class="bi bi-pause-circle-fill"></i>
-                </button>
-            </div>
-
-            <div class="card desc-card h1"> <!--desc card for song 2-->
-                <h4>Song title</h4>
-                <h5>Subheading</h5>
-                <p>description text description text description text description text description text description text</p>
-            </div>
-
-            <audio id="megalovania" src="megalovania.wav" preload="auto"></audio> <!--song 1 button-->
-            <div class="play-pause-stack">
-                <button class="play-button h1" onclick="document.getElementById('megalovania').play();">
-                    <i class="bi bi-play-circle-fill"></i>
-                </button>
-                <button class="pause-button h1" onclick="document.getElementById('megalovania').pause();">
+                <button class="pause-button h1" onclick="document.getElementById('hopes-and-dreams').pause();">
                     <i class="bi bi-pause-circle-fill"></i>
                 </button>
             </div>
 
             <div class="card desc-card h1"> <!--desc card for song 3-->
-                <h4>Song title</h4>
-                <h5>Subheading</h5>
-                <p>description text description text description text description text description text description text</p>
+                <h4>Hopes and Dreams</h4>
+                <h5>#087</h5>
+                <p>Plays in the true pacifist route as the protagonist speaks to Asriel Dreemurr.</p>
             </div>
         </div>
     </section>
