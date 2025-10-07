@@ -32,19 +32,19 @@
                 <!--links to hamburger menu button-->
                 <ul class="nav-item flex-nav-items navbar-nav ms-auto">
                     <li class="nav-list-item">
-                        <a href="mech.html" class="nav-link hover-underline-animation">MECH</a>
+                        <a href="mech.html" class="nav-link-page">MECH</a>
                     </li>
                     <li class="nav-item nav-list-item">
-                        <a href="story.html" class="nav-link hover-underline-animation">STORY</a>
+                        <a href="story.html" class="nav-link-page">STORY</a>
                     </li>
                     <li class="nav-item nav-list-item">
-                        <a href="characters.html" class="nav-link">CHARACTERS</a>
+                        <a href="characters.html" class="nav-link-page">CHARACTERS</a>
                     </li>
                     <li class="nav-item nav-list-item">
-                        <a href="music.html" class="nav-link hover-underline-animation">MUSIC</a>
+                        <a href="music.html" class="nav-link-page">MUSIC</a>
                     </li>
                     <li class="nav-item nav-list-item">
-                        <a href="culture.html" class="nav-link hover-underline-animation">IMPACT</a>
+                        <a href="culture.html" class="nav-link-page">IMPACT</a>
                     </li>
                 </ul>
             </div>
@@ -67,48 +67,46 @@
 
     <!--long horizontal cards for each song-->
     <section>
-        <div class="card"> <!--card 1: song 1-->
-            <button class="card-inline-parts play-button" type="button">
-                <i class="bi bi-play-circle play-icon"></i>
-            </button>
-            <div class="card-text-part card-inline-parts">
-                <h3>Song Title</h3>
-                <h4>Subheader</h4>
-                <p>
-                    description text description text description text description text description text description text 
-                    description text description text description text description text description text description text
-                </p>
+        <div class="container song-grid">
+            <!--cards organized in 2 column table format-->
+            <div> <!--play button for song 1-->
+                <div class="card play-button-card">
+                    <button>
+                        <i class="bi bi-play-circle"></i>
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="card"> <!--card 2: song 2-->
-            <button class="card-inline-parts play-button" type="button">
-                <i class="bi bi-play-circle play-icon"></i>
-            </button>
-            <div class="card-text-part card-inline-parts">
-                <h3>Song Title</h3>
-                <h4>Subheader</h4>
-                <p>
-                    description text description text description text description text description text description text 
-                    description text description text description text description text description text description text
-                </p>
+            <div> <!--desc card for song 2-->
+                <div class="card desc-card">
+                    <div>
+                        <h4>Student Name</h4>
+                        <h5>Class: BME</h5>
+                        <p>Describe in detail the contributions that
+                            this team member made to the project.</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="card"> <!--card 3: song 3-->
-            <button class="card-inline-parts play-button" type="button">
-                <i class="bi bi-play-circle play-icon"></i>
-            </button>
-            <div class="card-text-part card-inline-parts">
-                <h3>Song Title</h3>
-                <h4>Subheader</h4>
-                <p>
-                    description text description text description text description text description text description text 
-                    description text description text description text description text description text description text
-                </p>
+            <div> <!--play button for song 2-->
+                <div class="card play-button-card">
+                    <button>
+                        <i class="bi bi-play-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div> <!--desc card for song 2-->
+                <div class="card desc-card">
+                    <div>
+                        <h4>Student Name</h4>
+                        <h5>Class: BME</h5>
+                        <p>Describe in detail the contributions that
+                            this team member made to the project.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </section>
 </body>
 </html>

@@ -80,23 +80,12 @@ p {
   background-color: white;
 }
 
-.card-inline-parts {
-  border: 1px solid black;
-  display: inline-grid;
+.nav-link-page {
+  text-decoration: none;
+  padding: 8px;
 }
 
-.play-button {
-  width: 50px;
-  height: 50px;
-  justify-content: left;
-}
-
-.play-icon {
-  justify-items: center;
-  align-items: center;
-}
-
-.card-text-part {
-  justify-content: right;
-  width: 500px;
+.song-grid {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
 }
