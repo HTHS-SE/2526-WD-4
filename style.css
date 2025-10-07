@@ -105,11 +105,16 @@ a {
   color: #ffff00;
 }
 
-button {
-  border-color: #ffc90e;
+.navbar-toggler {
+  border-color: orange;
   border-width: 4px;
+  border-radius: 0;
+  background-color: purple;
 }
 
 button:hover {
-  background-color: #ffff00;
+  border-color: #ffff00;
+  border-width: 4px;
+  border-radius: 0;
+  background-color: purple;
 }
