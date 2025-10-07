@@ -91,13 +91,20 @@ p {
   grid-gap: 10px;
 }
 
+.desc-card {
+  padding: 10px;
+  border-width: 2px;
+}
+
 .play-button-card {
   background-color: transparent;
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 5px;
 }
 
-.desc-card {
-  padding: 10px;
+.play-button-card:hover {
+  background-color: yellow;
+  color: black;
+  border-color: yellow;
 }
