@@ -31,7 +31,7 @@
         <!--lg = large breakpoint, navbar-dark = light text-->
         <div class="container">
             <a href="index.html" class="navbar-brand" id="sans-logo">
-                <img src="img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top w-50">
+                <img src="img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top" id="sans-pic">
             </a>
                 
             <!--hamburger menu button-->
@@ -68,7 +68,7 @@
 
 
 
-            <div class="conatiner">
+            <div class="container">
                 <br>    <!--Line break-->
                 <h1 class="about-team text-center about-team" style="color: white;">Characters</h1>
                 <hr><br>    <!--Horizontal Line and line break-->
@@ -78,8 +78,10 @@
 
 
                     <!-- Links that open the popout -->
+                    <!--DONT FORGET-->
                     <p><a class="custom-link" href="#infoCardFrisk">Frisk</a></p>
                     <p><a class="custom-link" href="#infoCardFlowey">Flowey</a></p>
+                    <p><a class="custom-link" href="#infoCardToriel">Toriel</a></p>
 
                     <!-- ---- FRISK POPUP ---- -->
                     <div id="infoCardFrisk" class="popup" aria-hidden="true">
@@ -118,7 +120,24 @@
                     </div>
                     </div>
 
-                </div>
+                    <!-- ---- TORIEL POPUP ---- -->
+                    <div id="infoCardToriel" class="popup" aria-hidden="true">
+                    <a href="#" class="overlay" aria-hidden="true"></a>
+    
+                    <div class="offcanvas-panel" role="dialog" aria-labelledby="torielTitle" aria-modal="true">
+                        <a href="#" class="close-btn" aria-label="Close">&times;</a>
+                        <h2 id="torielTitle">Toriel</h2>
+                        <img src="GIFS/Toriel_overworld_sleeping.gif" alt="Flowey character image">
+                        <h5 class="mt-2">Antagonist</h5>
+                        <p>Info about character.</p>
+                        <ul>
+                        <li>Manipulative</li>
+                        <li>Appears early in the story</li>
+                        </ul>
+                    </div>
+                    </div>
+
+
                 </div> <!--Closing tag for row-->
                 <br>
             </div> 

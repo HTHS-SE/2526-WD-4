@@ -26,6 +26,43 @@
 }
 
 
+/* --- ARROW ---*/
+/* Base style - remove the default summary arrow for all */
+summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Left-side event keeps default arrow on the right */
+.timeline-event.left summary {
+  position: relative;
+  text-align: center;
+}
+
+/* Right-side event: mirror layout (arrow inside, on the left) */
+.timeline-event.right summary {
+  position: relative;
+  text-align: center;
+}
+
+/* Custom arrow for right-side card */
+.timeline-event.right summary::before {
+  position: absolute;
+  left: 1.5rem;      /* adjust distance from edge */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+}
+
+/* Slight padding to balance out arrow space so text stays centered */
+.timeline-event.right summary h4,
+.timeline-event.right summary h5 {
+  padding-left: 1.5rem;
+}
+
 /* --- STORY PAGE --- */
 
 body{
