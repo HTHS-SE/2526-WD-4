@@ -88,7 +88,7 @@ p {
 .song-grid {
   display: grid;
   grid-template-columns: 1fr 9fr;
-  grid-gap: 10px;
+  grid-gap: 20px 10px;
 }
 
 .desc-card {
@@ -96,15 +96,25 @@ p {
   border-width: 2px;
 }
 
-.play-button-card {
+.play-button,
+.pause-button {
   background-color: transparent;
   color: white;
   border: 2px solid white;
   border-radius: 5px;
 }
 
-.play-button-card:hover {
+.play-button:hover,
+.play-button:focus:not(:active),
+.pause-button:hover,
+.pause-button:focus:not(:active) {
   background-color: yellow;
   color: black;
   border-color: yellow;
+}
+
+.play-pause-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
