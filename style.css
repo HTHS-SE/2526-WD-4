@@ -40,9 +40,7 @@ body {
   font-size: 20px;
 }
 
-nav {
-  border-color: white;
-}
+
 .nav-list-item { /*for each item in the navbar*/
   margin: 0px 10px;
   padding: 4px;
@@ -109,15 +107,15 @@ a {
 }
 
 .navbar-toggler {
-  border-color: orange;
+  border-color: #f2b100;
   border-width: 4px;
   border-radius: 0;
-  background-color: purple;
+  background-color: #f4d488ff;
 }
 
 button:hover {
-  border-color: #ffff00;
+  border-color: #cd6b01;
   border-width: 4px;
   border-radius: 0;
-  background-color: purple;
+  background-color: #fea912ff;
 }
