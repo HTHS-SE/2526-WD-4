@@ -73,19 +73,36 @@
                 <h1 class="about-team text-center about-team" style="color: white;">Characters</h1>
                 <hr><br>    <!--Horizontal Line and line break-->
 
-                <!--Card organized in 2 x 2 table format-->
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-
-
                     <!-- Links that open the popout -->
-                    <!--DONT FORGET-->
-                    <p>
-                        <img src="img/frisk_char.png" alt="Frisk character image" style="max-height: 400px;">
-                        <br>
-                        <a class="custom-link" href="#infoCardFrisk" style="margin: 70px;">Frisk</a>
-                    </p>
-                    <p><a class="custom-link" href="#infoCardFlowey">Flowey</a></p>
-                    <p><a class="custom-link" href="#infoCardToriel">Toriel</a></p>
+                    <!--ROW 1-->
+                    <div class="character-row">
+                        <div class="character">
+                          <img src="img/frisk_char.png" alt="Frisk character image">
+                          <a class="custom-link" href="#infoCardFrisk">Frisk</a>
+                        </div>
+                      
+                        <div class="character">
+                          <img src="img/flowey_transparent2.png" alt="Flowey character image">
+                          <a class="custom-link" href="#infoCardFlowey">Flowey</a>
+                        </div>
+
+                        <div class="character">
+                            <img src="img/Toriel_image.png" alt="Toriel character image">
+                            <a class="custom-link" href="#infoCardToriel">Toriel</a>
+                        </div>
+
+                        <div class="character">
+                            <img src="img/sans_chara3.png" alt="Sans character image">
+                            <a class="custom-link" href="#infoCardSans">Sans</a>
+                        </div>
+
+                        <div class="character">
+                            <img src="img/Papyrus_chara.webp" alt="Papyrus character image">
+                            <a class="custom-link" href="#infoCardPapyrus">Papyrus</a>
+                        </div>
+
+                    </div>
+
 
                     <!-- ---- FRISK POPUP ---- -->
                     <div id="infoCardFrisk" class="popup" aria-hidden="true">
@@ -95,8 +112,9 @@
                     <div class="offcanvas-panel" role="dialog" aria-labelledby="friskTitle" aria-modal="true">
                         <a href="#" class="close-btn" aria-label="Close">&times;</a>
                         <h2 id="friskTitle">Frisk</h2>
-                        <img src="GIFS/Frisk_walking.webp" alt="Frisk character image">
+                        <img src="GIFS/Frisk_walking.webp" alt="Frisk character GIF">
                         <h5 class="mt-2">Protagonist</h5>
+                        <p>Info</p>
                         <ul>
                         <li>Character you play in the game</li>
                         <li>Has a red colored soul</li>
@@ -114,12 +132,14 @@
                     <div class="offcanvas-panel" role="dialog" aria-labelledby="floweyTitle" aria-modal="true">
                         <a href="#" class="close-btn" aria-label="Close">&times;</a>
                         <h2 id="floweyTitle">Flowey</h2>
-                        <img src="img/Flowey.png" alt="Flowey character image">
+                        <img src="GIFS/flowey_talking.webp" alt="Flowey character GIF">
                         <h5 class="mt-2">Antagonist</h5>
-                        <p>Info about character.</p>
+                        <p>Info</p>
                         <ul>
-                        <li>Manipulative</li>
-                        <li>Appears early in the story</li>
+                            <li>Manipulative</li>
+                            <li>The first enemy Frisk meets</li>
+                            <li>Doesn't have a soul, unlike other characters</li>
+                            <li>Has the ability to SAVE the game, just like the player</li>
                         </ul>
                     </div>
                     </div>
@@ -131,17 +151,51 @@
                     <div class="offcanvas-panel" role="dialog" aria-labelledby="torielTitle" aria-modal="true">
                         <a href="#" class="close-btn" aria-label="Close">&times;</a>
                         <h2 id="torielTitle">Toriel</h2>
-                        <img src="GIFS/Toriel_overworld_sleeping.gif" alt="Flowey character image">
-                        <h5 class="mt-2">Antagonist</h5>
-                        <p>Info about character.</p>
+                        <img src="GIFS/Toriel_overworld_sleeping.gif" alt="Toriel character GIF">
+                        <h5 class="mt-2">Secondary Character</h5>
+                        <p>Info</p>
                         <ul>
-                        <li>Manipulative</li>
-                        <li>Appears early in the story</li>
+                            <li>Serves as a Tutoriel Character</li>
+                            <li>First supporting player meets</li>
+                            <li>Located in the RUINS</li>
+                            <ul>
+                                <li>Can you only interact with her in this room</li>
+                            </ul>
+                            <li>First actual battle</li>
                         </ul>
                     </div>
                     </div>
 
+                    <!-- ---- SANS POPUP ---- -->
+                    <div id="infoCardSans" class="popup" aria-hidden="true">
+                    <a href="#" class="overlay" aria-hidden="true"></a>
+        
+                        <div class="offcanvas-panel" role="dialog" aria-labelledby="sansTitle" aria-modal="true">
+                            <a href="#" class="close-btn" aria-label="Close">&times;</a>
+                            <h2 id="sansTitle">Sans</h2>
+                            <img src="GIFS/sans_gif.gif" alt="Sans character GIF">
+                            <h5 class="mt-2">Role</h5>
+                            <p>Info</p>
+                            <ul>
+                                <li>Text about Character</li>
+                        </div>
+                    </div>
 
+                    <!-- ---- PAPYRUS POPUP ---- -->
+                    <div id="infoCardPapyrus" class="popup" aria-hidden="true">
+                        <a href="#" class="overlay" aria-hidden="true"></a>
+        
+                        <div class="offcanvas-panel" role="dialog" aria-labelledby="papyrusTitle" aria-modal="true">
+                            <a href="#" class="close-btn" aria-label="Close">&times;</a>
+                            <h2 id="papyrusTitle">Papyrus</h2>
+                            <img src="GIFS/undertale-papyrus.gif" alt="Papyrus character GIF">
+                            <h5 class="mt-2">Role</h5>
+                            <p>Info</p>
+                            <ul>
+                                <li>Text about Character</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div> <!--Closing tag for row-->
                 <br>
             </div> 
