@@ -2,7 +2,7 @@
   font-family: "Pixel Operator";
   src:
     local("Pixel Operator"), local("pixel-operator-font"), local("pixel_operator"),
-    url(/pixel-operator-font/PixelOperator-Bold.ttf) format("opentype");
+    url(pixel-operator-font\PixelOperator-Bold.ttf) format("opentype");
 }
 
 @font-face {
@@ -12,6 +12,14 @@
 
 *{
   font-family: "Pixel Operator";
+  cursor: url(img/cursor-heart.png) 0 0, default;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 20px 30px;
+  font-family: "Pixel Operator", sans-serif;
 }
 
 .flex-nav-items { /*for unordered list of items in navbar*/
@@ -23,11 +31,12 @@
 
 .nav-list-item { /*for each item in the navbar*/
   margin: 0px 10px;
-  padding: 4px;
+  padding: 10px;
   text-align: center;
   align-content: center;
-  border: 2px solid orange;
+  border: 2px solid white;
   border-radius: 3px;
+  font-size: 20px;
 }
 
 .nav-list-item a {
@@ -38,6 +47,7 @@
 
 .nav-list-item:hover { /*for each item in the navbar when hovered over*/
   border: 2px solid #ffff00;
+  color: yellow;
 }
 
 a:hover {
@@ -62,14 +72,6 @@ a {
 a {
     color: yellow;
     font-family:"Pixel Operator";
-}
-
-body {
-  cursor: url(img/cursor-heart.png);
-  background-color: black;
-  color: white;
-  margin: 20px 50px;
-  font-family: "Pixel Operator", sans-serif;
 }
 
 p {
