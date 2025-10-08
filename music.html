@@ -14,6 +14,7 @@
                 crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <!--lg = large breakpoint, navbar-dark = light text-->
         <div class="container">
@@ -31,63 +32,102 @@
                 <!--links to hamburger menu button-->
                 <ul class="nav-item flex-nav-items navbar-nav ms-auto">
                     <li class="nav-list-item">
-                        <a href="mech.html" class="nav-link hover-underline-animation">MECH</a>
+                        <a href="mech.html" class="nav-link-page">MECH</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="story.html" class="nav-link hover-underline-animation">STORY</a>
+                        <a href="story.html" class="nav-link-page">STORY</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="characters.html" class="nav-link">CHARACTERS</a>
+                        <a href="characters.html" class="nav-link-page">CHARACTERS</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="music.html" class="nav-link hover-underline-animation">MUSIC</a>
+                        <a href="music.html" class="nav-link-page">MUSIC</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="culture.html" class="nav-link hover-underline-animation">IMPACT</a>
+                        <a href="culture.html" class="nav-link-page">IMPACT</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    
     <hr> <!--horizontal line-->
+
     <!--music tab title and copyright acknowledgment-->
     <section>
         <h1>MUSIC</h1>
         <p>
-            All of the following songs are from the Undertale <abbr id="Original Soundtrack">OST</abbr>. 
-            The Undertale <abbr id="Original Soundtrack">OST</abbr> was composed by Toby Fox, the game's creator, 
+            All of the following songs are select tracks from the Undertale Original Soundtrack (OST). 
+            The Undertale OST was composed by Toby Fox, the game's creator, 
             and released by the Materia Collective label. 
             It is used here for non-commercial purposes as a part of the website, which is a school project.
         </p>
     </section>
 
-    <!--long horizontal cards for each song-->
+    <!--song cards-->
     <section>
-        <div class="card ">
-                    <img src="" class= "card-img-left" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">Song Title</h4>
-                        <h5>Subheader</h5>
-                        <p class="card-text">
-                            description text description text description text description text description text description text 
-                            description text description text description text description text description text description text
-                        </p>
-                    </div>
-                </div>
-    </section>
-
-    <!--footer (need bootstrap icon)-->
-       <footer class="p-5 footer text-light text-center position-relative">
-            <div class="container">
-                <p class="lead">Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</p>
-                <p>Game by Toby Fox and Temmie Chang</p>
-                <p>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</p>
-                <a href="#" class="position-absolute bottom-0 end-0 p-5">
-                   <i class="bi bi-caret-up-square h2 icon-white"></i>
-                </a>
+        <div class="container song-grid">
+            <audio id="undertale" src="audio/undertale.wav" preload="auto"></audio> <!--undertale button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('undertale').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('undertale').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
             </div>
-       </footer>
+
+            <div class="card desc-card h1"> <!--undertale desc card-->
+                <h4>Undertale</h4>
+                <h5>#071</h5>
+                <p>Plays in all routes as the protagonist explores New Home.</p>
+            </div>
+            
+            <audio id="megalovania" src="audio/megalovania.wav" preload="auto"></audio> <!--megalovania button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('megalovania').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('megalovania').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+            
+            <div class="card desc-card h1"> <!--megalovania desc card-->
+                <h4>MEGALOVANIA</h4>
+                <h5>#100</h5>
+                <p>Perhaps the most recognizable track from Undertale. Plays in the genocide route during the Sans final battle.</p>
+            </div>
+
+            <audio id="hopes-and-dreams" src="audio/hopes-and-dreams.wav" preload="auto"></audio> <!--song 3 button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('hopes-and-dreams').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('hopes-and-dreams').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+
+            <div class="card desc-card h1"> <!--desc card for song 3-->
+                <h4>Hopes and Dreams</h4>
+                <h5>#087</h5>
+                <p>Plays in the true pacifist route as the protagonist speaks to Asriel Dreemurr.</p>
+            </div>
+        </div>
+    </section>
 </body>
-
-
 </html>
