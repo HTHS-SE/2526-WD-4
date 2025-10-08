@@ -106,6 +106,7 @@ button:hover {
   background-color: #fea912ff;
 }
 
+
 /*characters tab*/
 .card-title{
     font-size: 50px;
@@ -335,6 +336,8 @@ li{
   font-size: 25px;
 }
 
+
+
 /*characters page */
 a.custom-link{
     font-family:'Undretale font';
@@ -353,9 +356,6 @@ a.custom-link:focus {
     text-decoration: underline;
 }
   
-body{
-    font-family: 'Undertale font';
-}
 
 .card-title{
     font-size: 50px;
