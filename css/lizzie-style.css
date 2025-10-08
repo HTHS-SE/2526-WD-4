@@ -2,16 +2,16 @@
   font-family: "Pixel Operator";
   src:
     local("Pixel Operator"), local("pixel-operator-font"), local("pixel_operator"),
-    url(pixel-operator-font/PixelOperator-Bold.ttf) format("opentype");
+    url(/pixel-operator-font/PixelOperator-Bold.ttf) format("opentype");
 }
 
 @font-face {
-	font-family:Mercy;
-	src:url("fonts/mercy/MERCY.eot?") format("eot"),url("fonts/mercy/MERCY.woff") format("woff"),url("fonts/mercy/MERCY.otf") format("opentype");
+	font-family: Mercy;
+	src:url("fonts/mercy/MERCY.eot") format("eot"), url("fonts/mercy/MERCY.woff") format("woff"),url("fonts/mercy/MERCY.otf") format("opentype");
 }
 
 *{
-    font-family: "Pixel Operator";
+  font-family: "Pixel Operator";
 }
 
 .flex-nav-items { /*for unordered list of items in navbar*/
@@ -68,7 +68,7 @@ body {
   background-color: black;
   color: white;
   margin: 20px 50px;
-  font-family: "Mercy", "Pixel Operator", sans-serif;
+  font-family: "Pixel Operator", sans-serif;
 }
 
 p {
