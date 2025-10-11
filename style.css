@@ -4,28 +4,32 @@
   font-family: "Pixel Operator";
   src:
     local("Pixel Operator"), local("pixel-operator-font"), local("pixel_operator"),
-    url(pixel-operator-font/PixelOperator-Bold.ttf) format("opentype");
+    url(fonts/PixelOperator-Bold.ttf) format("opentype");
 }
 
 @font-face /*font for buttons of navbar */{
 	font-family:Mercy;
-	src:url("fonts/mercy/MERCY.eot?") format("eot"),url("fonts/mercy/MERCY.woff") format("woff"),url("fonts/mercy/MERCY.otf") format("opentype");
+	src:url("fonts/MERCY.eot") format("eot"),url("fonts/MERCY.ttf") format("ttf"),url("fonts/MERCY.otf") format("opentype");
 }
 
 *{
     font-family: "Pixel Operator";
 }
 
+
 body {
     background-color: black;
     color: white;
     margin: 20px 30px;
     font-family: "Pixel Operator", sans-serif;
+
+    cursor: url(img/cursor-heart.png), auto;
 }
 
 #sans-pic {
   width: 50px;
 }
+
 
 .flex-nav-items { /*for unordered list of items in navbar*/
   display: inline-flex;
@@ -40,11 +44,11 @@ body {
   padding: 4px;
   text-align: center;
   align-content: center;
-  border: 4px solid orange;
+  border: 4px solid #f07839;
 }
 
 .nav-list-item a {
-  color: orange;
+  color: #f07839;
   font-family: Mercy, "Pixel Operator";
   font-size: 30px;
 }
@@ -76,11 +80,32 @@ body {
     font-family: "Pixel Operator";
 }
 
+i:hover {
+  color: #f07839;
+}
+
+
 .game-window {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1 2 auto;
+}
+
+.mech-buttons img {
+  width: 220px;
+  height: 84px;
+
+  margin: 20px;
+}
+
+.mech-buttons {
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.mech-buttons:hover {
+  filter: hue-rotate(20deg) brightness(180%);
 }
 
 a {
@@ -93,10 +118,10 @@ a {
 }
 
 .navbar-toggler {
-  border-color: #f2b100;
+  border-color: #f4d488ff;
   border-width: 4px;
   border-radius: 0;
-  background-color: #f4d488ff;
+  background-color: #f2b100;
 }
 
 button:hover {
@@ -250,7 +275,7 @@ p {
   bottom: 0;
   left: 50%;
   width: 4px;
-  background: #0d6efd; /* blue line */
+  background: #fdd10d; /* blue line */
   transform: translateX(-50%);
 }
 .timeline-dot {
@@ -259,7 +284,7 @@ p {
   width: 20px;
   height: 20px;
   background: #fff;
-  border: 4px solid #0d6efd;
+  border: 4px solid #fd8d0d;
   border-radius: 50%;
   transform: translateX(-50%);
   z-index: 2;
