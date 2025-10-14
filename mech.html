@@ -18,12 +18,14 @@
 <body class="body">
    <div class="container-lg">
 
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    
+
+      <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <!--lg = large breakpoint, navbar-dark = light text-->
         <div class="container">
             <a href="index.html" class="navbar-brand" id="sans-logo">
-                <img src="img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top w-50">
+                <img src="img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top" id="sans-pic">
             </a>
                 
             <!--hamburger menu button-->
@@ -35,42 +37,74 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <!--links to hamburger menu button-->
                 <ul class="nav-item flex-nav-items navbar-nav ms-auto">
-                  <li class="nav-list-item">
-                    <a href="mech.html" class="nav-link hover-underline-animation">MECH</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="story.html" class="nav-link hover-underline-animation">STORY</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="characters.html" class="nav-link">CHARACTERS</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="music.html" class="nav-link hover-underline-animation">MUSIC</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="culture.html" class="nav-link hover-underline-animation">IMPACT</a>
-                  </li>
+                    <li class="nav-list-item">
+                        <a href="mech.html" class="nav-link-page">MECH</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="story.html" class="nav-link-page">STORY</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="characters.html" class="nav-link-page">CHARACTERS</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="music.html" class="nav-link-page">MUSIC</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="culture.html" class="nav-link-page">IMPACT</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <br>
+    <br> <br>
     <!--interactive explanation-->
-    <div class="game-window">
+    <!--<div class="game-window">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSNPWiykTV5qrfNxip-9hYRWaSYX2LNa9xR047T5qO1n2ACOcYnlY-GEbzg-67kxRxpch8dcSuWwpaa/pubembed?start=false&loop=false&delayms=3000" 
-        frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="border:4px solid rgb(255, 255, 255);"></iframe>
+    </div> -->
+
+    <div class="mechanics-page-intro">
+        <div class="mech-sans">
+            <img src="img/Sans_battle_idle.gif" alt="sans."> <!--note: MAKE HIM BIGGER-->
+        </div>
+        <br>
+        <div class="dialogue-intro">
+            <img src="img/intro-t-1.png" alt="in undertale, you must spar against hostile enemies">
+            <br> <br>
+            <img src="img/intro-t-2.png" alt="each side alternates between one turn">
+            <br> <br>
+            <img src="img/intro-t-3.png" alt="the ending you get depends on your choices throughout the game">
+        </div>
+
+        <br>
+        <div class="mech-button">
+            <div id="fight-button" class="mech-buttons">
+                <a href="fight.html"><img  src="img/FIGHT_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
+            </div>
+            <div id="act-button" class="mech-buttons"> <!--MAKE INLINE-->
+                <a href="act.html"><img  src="img/ACT_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
+            </div>
+            <div id="items-button" class="mech-buttons"> <!--MAKE INLINE-->
+                <a href="items.html"><img  src="img/ITEM_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
+            </div>
+            <div id="mercy-button" class="mech-buttons"> <!--MAKE INLINE-->
+                <a href="mercy.html"><img  src="img/MERCY_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
+            </div>
+        </div>
     </div>
+
+
     <br> <br>
       
        <!--footer (need bootstrap icon)-->
        <footer class="p-5 footer text-light text-center position-relative">
             <div class="container">
-                <p class="lead">Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</p>
-                <p>Game by Toby Fox and Temmie Chang</p>
-                <p>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</p>
+                <h4>Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</h4>
+                <h4>Game by Toby Fox and Temmie Chang</h4>
+                <h4>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</h4>
                 <a href="#" class="position-absolute bottom-0 end-0 p-5">
-                   <i class="bi bi-caret-up-square h2 icon-white"></i>
+                   <i class="bi bi-caret-up-square h2 icon-white" ></i>
                 </a>
             </div>
        </footer>
