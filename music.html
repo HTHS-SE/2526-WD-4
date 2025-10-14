@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDERTALE-SE - Music</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+                rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+                crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <!--lg = large breakpoint, navbar-dark = light text-->
+        <div class="container">
+            <a href="index.html" class="navbar-brand" id="sans-logo">
+                <img src="img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top w-50">
+            </a>
+                
+            <!--hamburger menu button-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--collapsible navbar menu w/custom hover underline CSS animation-->
+            <div class="collapse navbar-collapse" id="navmenu">
+                <!--links to hamburger menu button-->
+                <ul class="nav-item flex-nav-items navbar-nav ms-auto">
+                  <li class="nav-list-item">
+                    <a href="mech.html" class="nav-link hover-underline-animation">MECH</a>
+                  </li>
+                  <li class="nav-list-item">
+                      <a href="story.html" class="nav-link hover-underline-animation">STORY</a>
+                  </li>
+                  <li class="nav-list-item">
+                      <a href="characters.html" class="nav-link">CHARACTERS</a>
+                  </li>
+                  <li class="nav-list-item">
+                      <a href="music.html" class="nav-link hover-underline-animation">MUSIC</a>
+                  </li>
+                  <li class="nav-list-item">
+                      <a href="culture.html" class="nav-link hover-underline-animation">IMPACT</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--music tab title and copyright acknowledgment-->
+    <section>
+        <h1>MUSIC</h1>
+        <p>
+            All of the following songs are select tracks from the Undertale Original Soundtrack (OST). 
+            The Undertale OST was composed by Toby Fox, the game's creator, 
+            and released by the Materia Collective label. 
+            It is used here for non-commercial purposes as a part of the website, which is a school project.
+        </p>
+    </section>
+
+    <!--song cards-->
+    <section>
+        <div class="container song-grid">
+            <audio id="undertale" src="audio/undertale.wav" preload="auto"></audio> <!--undertale button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('undertale').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('undertale').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+
+            <div class="card desc-card h1"> <!--undertale desc card-->
+                <h4>Undertale</h4>
+                <h5>#071</h5>
+                <p>Plays in all routes as the protagonist explores New Home.</p>
+            </div>
+            
+            <audio id="megalovania" src="audio/megalovania.wav" preload="auto"></audio> <!--megalovania button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('megalovania').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('megalovania').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+            
+            <div class="card desc-card h1"> <!--megalovania desc card-->
+                <h4>MEGALOVANIA</h4>
+                <h5>#100</h5>
+                <p>Perhaps the most recognizable track from Undertale. Plays in the genocide route during the Sans final battle.</p>
+            </div>
+
+            <audio id="hopes-and-dreams" src="audio/hopes-and-dreams.wav" preload="auto"></audio> <!--song 3 button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('hopes-and-dreams').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('hopes-and-dreams').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+
+            <div class="card desc-card h1"> <!--desc card for song 3-->
+                <h4>Hopes and Dreams</h4>
+                <h5>#087</h5>
+                <p>Plays in the true pacifist route as the protagonist speaks to Asriel Dreemurr.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--footer (need bootstrap icon)-->
+    <footer class="p-5 footer text-light text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</p>
+            <p>Game by Toby Fox and Temmie Chang</p>
+            <p>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-caret-up-square h2 icon-white"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

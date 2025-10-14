@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    local("Pixel Operator"), local("pixel-operator-font"), local("pixel_operator"),
+    url(pixel-operator-font\PixelOperator-Bold.ttf) format("opentype");
+}
+
+@font-face {
+	font-family: Mercy;
+	src:url("fonts/mercy/MERCY.eot") format("eot"), url("fonts/mercy/MERCY.woff") format("woff"),url("fonts/mercy/MERCY.otf") format("opentype");
+}
+
+*{
+  font-family: "Pixel Operator";
+  cursor: url(img/cursor-heart.png) 0 0, default;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 20px 30px;
+  font-family: "Pixel Operator", sans-serif;
+}
+
+.flex-nav-items { /*for unordered list of items in navbar*/
+  display: inline-flex;
+  list-style-type: none;
+  align-items: right;
+  font-size: 20px;
+}
+
+.nav-list-item { /*for each item in the navbar*/
+  margin: 0px 10px;
+  padding: 10px;
+  text-align: center;
+  align-content: center;
+  border: 2px solid white;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.nav-list-item a {
+  color: orange;
+  font-family: Mercy, "Pixel Operator";
+  font-size: 30px;
+}
+
+.nav-list-item:hover { /*for each item in the navbar when hovered over*/
+  border: 2px solid #ffff00;
+  color: yellow;
+}
+
+a:hover {
+  color: #ffff00;
+}
+
+#navmenu { /*entire collapsible navbar*/
+  justify-content: right;
+}
+
+
+a {
+  cursor: url(img/cursor-selecting.png) 2 2, pointer;
+}
+
+.game-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: yellow;
+    font-family:"Pixel Operator";
+}
+
+p {
+  font-size: 18px;
+}
+
+.card {
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.nav-link-page {
+  text-decoration: none;
+  padding: 8px;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-gap: 20px 10px;
+}
+
+.desc-card {
+  padding: 10px;
+  border-width: 2px;
+}
+
+.play-button,
+.pause-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.play-button:hover,
+.play-button:focus:not(:active),
+.pause-button:hover,
+.pause-button:focus:not(:active) {
+  background-color: yellow;
+  color: black;
+  border-color: yellow;
+}
+
+.play-pause-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
