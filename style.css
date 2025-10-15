@@ -28,7 +28,6 @@ body {
 /*sans logo a designated size*/
 #sans-pic {
   width: 50px;
-  position: fixed;
 }
 
 a { /*MAKE LINKS YELLOW */
@@ -359,6 +358,170 @@ p.card-text{
   display: block;
   object-fit: contain;
 }
+
+
+/*--------------------carousel*/
+.carousel-item img {
+    object-fit: cover;
+    object-position: top center; /* or adjust: center bottom, etc. */
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+/* --- Overlay container (dark background) --- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(3px);
+    z-index: 1050;
+    padding: 2rem;
+  }
+  
+  /* When the URL hash matches this overlay's ID */
+  .overlay:target {
+    display: flex;
+    animation: fadeOverlay 0.2s ease-in;
+  }
+  
+  @keyframes fadeOverlay {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+  }
+  
+  /* --- Popup card --- */
+  .popup {
+    background: #0f0f0f;
+    color: #fff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    max-width: 680px;
+    width: 95%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    position: relative;
+    text-align: left;
+    animation: popIn 0.25s cubic-bezier(.2,.8,.2,1);
+  }
+  
+  @keyframes popIn {
+    from { transform: scale(0.97); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+  
+/* Center popup content */
+.popup {
+    text-align: center;        /* centers text and inline elements like <img> */
+    display: flex;
+    flex-direction: column;    /* stack elements vertically */
+    align-items: center;       /* center them horizontally */
+    justify-content: center;   /* center them vertically (optional) */
+    padding: 20px;
+  }
+  
+  /* Optional: make the image a bit smaller and spaced nicely */
+  .popup img {
+    max-width: 80%;            /* keeps it from overflowing */
+    height: auto;
+    margin: 10px 0;
+  }
+  
+  /* Center the bullet list and remove side padding */
+  .popup ul {
+    list-style-position: inside; /* keeps bullets aligned with text */
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;          /* centers multi-line list items */
+  }
+
+  
+  /* --- Close button --- */
+  .popup .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  .popup .close:hover { color: #ffd700; }
+  
+  /* --- Image formatting --- */
+  .popup img {
+    max-width: 160px;
+    height: auto;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 540px) {
+    .popup img { display: block; float: none; margin: 0 auto 1rem; }
+  }
+  
+  /* --- Link styles --- */
+  .custom-link, .text-link {
+    color: #ffd700;
+    text-decoration: none;
+  }
+  .custom-link:hover, .text-link:hover {
+    text-decoration: underline;
+  }
+/* Prevent hover color change on carousel arrows */
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  color: inherit !important; /* keeps Bootstrap’s default color */
+  filter: none !important;   /* disables any color filter */
+  background: none !important; /* remove any hover background you added */
+}
+ 
+/* --- Make all carousel images the same height --- */
+.carousel-item img {
+    height: 90vh; /* or another height */
+    width: 100%;
+    object-fit: contain; /* keeps full image in frame */
+    background-color: black; /* fills empty space with black */
+  }
+  
+  
+  /* --- Transparent black background for captions --- */
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* black w/ 50% transparency */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+  
+  /* Optional: make text stand out more */
+  .carousel-caption h5,
+  .carousel-caption p,
+  .carousel-caption a {
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Remove yellow hover color just in carousel links */
+  .carousel-caption a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+
+  #carouselExampleCaptions {
+    max-height: 40vh; /* Shrinks overall carousel height */
+    overflow: hidden; /* Hides image overflow */
+  }
+  
+  .carousel-item img {
+    height: 40vh; /* Matches carousel height */
+    object-fit: contain; /* Keeps full image visible */
+    background-color: black;
+  }
+  
+
 
 /*-----------------------------------MUSIC PAGE----------------------------------*/
 p {
