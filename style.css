@@ -114,6 +114,10 @@ i:hover {
   cursor: url(img/broken-soul-cursor.png), cell;
 }
 
+::selection {
+  background-color: #ffcc00; /* Yellow highlight color */
+  color: #ff0000; /* red text color */
+}
 
 /* ------------------------INDEX PAGE----------------------------------------*/
 .game-window {
