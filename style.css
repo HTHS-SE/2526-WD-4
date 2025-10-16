@@ -13,6 +13,7 @@
 
 *{
     font-family: "Pixel Operator";
+    cursor: url(img/cursor-heart.png), cell;
 }
 
 
@@ -22,17 +23,18 @@ body {
     margin: 20px 30px;
     font-family: "Pixel Operator", sans-serif;
 
-    cursor: url(img/cursor-heart.png), auto;
 }
 
 /*sans logo a designated size*/
 #sans-pic {
   width: 50px;
+  cursor: url(img/broken-soul-cursor.png), cell;
 }
 
 a { /*MAKE LINKS YELLOW */
     color: yellow;
     font-family:"Pixel Operator";
+    cursor: url(img/broken-soul-cursor.png), cell;
 }
 
 
@@ -60,6 +62,7 @@ a { /*MAKE LINKS YELLOW */
 
 .nav-list-item:hover { /*for each item in the navbar when hovered over*/
   border: 4px solid #ffff00;
+  
 }
 
 .nav-list-item a:hover { /*for text in each item in navbar when hovered over*/
@@ -68,7 +71,7 @@ a { /*MAKE LINKS YELLOW */
 
 #navmenu { /*entire collapsible navbar*/
   justify-content: right;
-
+  
 }
 
 .navbar-toggler { /*navbar button normal*/
@@ -107,6 +110,7 @@ button:hover { /* navbar button when hovered over*/
 /*for the up button on the footer. when hovered over, it turns orange*/
 i:hover {
   color: #f07839;
+  cursor: url(img/broken-soul-cursor.png), cell;
 }
 
 
@@ -115,7 +119,41 @@ i:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 2 auto;
+}
+
+
+#message-for-game {
+  display: none;
+}
+
+@keyframes shake{ /*a shaking animation like in undertale*/
+  0%{
+    transform: translateY(0)
+  }
+   
+  25%{
+    transform: translateY(5px);
+  }
+    
+  50%{
+    transform: translateY(-5px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .game-window {
+    display: none;
+  }
+
+  #message-for-game {
+    display: block;
+    color: red;
+    animation: shake 0.3s infinite;
+  }
 }
 
 /*---------------------------MECHANICS PAGE---------------------------------------*/
@@ -123,13 +161,14 @@ i:hover {
 .mech-buttons img {
   width: 220px;
   height: 84px;
-
+  cursor: url(img/broken-soul-cursor.png), cell;
   margin: 20px;
 }
 
 .mech-buttons {
   display: inline-block;
   justify-content: space-between;
+  
 }
 
 .mech-buttons:hover {
@@ -175,190 +214,6 @@ i:hover {
 
 
 /*--------------------------------------Characters page---------------------------*/
-.card-title{
-    font-size: 50px;
-}
-
-p.card-text{
-    font-size: 20px;
-}
-
-
-.popup { 
-    position: fixed; 
-    inset: 0; 
-    pointer-events: none; 
-    z-index: 1000; 
-}
-
-.popup .overlay {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .25s ease;
-  pointer-events: none;
-}
-
-.offcanvas-panel {
-  position: fixed;
-  top: 0;
-  right: -420px;            /* start offscreen */
-  width: 360px;
-  max-width: 90%;
-  height: 100%;
-  background: #111;
-  color: #fff;
-  padding: 22px;
-  box-shadow: -8px 0 24px rgba(0,0,0,0.6);
-  transition: right .28s ease;
-  overflow-y: auto;
-  pointer-events: none;
-}
-
-/* Activate any popup when its container is targeted */
-:target .overlay {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-:target .offcanvas-panel {
-  right: 0;
-  pointer-events: auto;
-}
-
-/* close button */
-.close-btn {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 28px;
-  color: #ffcc00;
-  text-decoration: none;
-}
-.close-btn:hover { color: #fff; }
-
-/* images inside popouts */
-.popup img { 
-  display:block; 
-  margin: 18px auto; 
-  max-width: 260px; 
-  width:100%; 
-  height: auto; 
-}
-
-/* small-screen tweak */
-@media (max-width: 520px) {
-  .offcanvas-panel { 
-    width: 100%; 
-    right: -100%; 
-  }
-}
-
-a.custom-link{
-    font-family:'Undretale font';
-}
-
-a.custom-link {
-    color: white; /* default color */
-    font-size: 50px;
-    text-decoration: none;
-}
-  
-a.custom-link:hover,
-a.custom-link:focus {
-    color: yellow; /* hover/focus color */
-    font-size: 50px;
-    text-decoration: underline;
-}
-  
-
-.card-title{
-    font-size: 50px;
-}
-
-p.card-text{
-    font-size: 20px;
-}
-
-
-.popup { 
-    position: fixed; 
-    inset: 0; 
-    pointer-events: none; 
-    z-index: 1000; 
-}
-
-.popup .overlay {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .25s ease;
-  pointer-events: none;
-}
-
-.offcanvas-panel {
-  position: fixed;
-  top: 0;
-  right: -420px;            /* start offscreen */
-  width: 360px;
-  max-width: 90%;
-  height: 100%;
-  background: #111;
-  color: #fff;
-  padding: 22px;
-  box-shadow: -8px 0 24px rgba(0,0,0,0.6);
-  transition: right .28s ease;
-  overflow-y: auto;
-  pointer-events: none;
-}
-
-/* Activate any popup when its container is targeted */
-:target .overlay {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-:target .offcanvas-panel {
-  right: 0;
-  pointer-events: auto;
-}
-
-/* close button */
-.close-btn {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 28px;
-  color: #ffcc00;
-  text-decoration: none;
-}
-.close-btn:hover { color: #fff; }
-
-
-.character-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end; /* aligns bottom edges */
-  gap: 80px;
-  text-align: center;
-}
-
-.character {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.character img {
-  height: 300px;  /* consistent height for all */
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
 
 /*--------------------carousel*/
 .carousel-item img {
@@ -446,6 +301,7 @@ p.card-text{
     font-size: 1.6rem;
     text-decoration: none;
     color: #fff;
+    cursor: url(img/broken-soul-cursor.png), cell;
   }
   .popup .close:hover { color: #ffd700; }
   
@@ -469,7 +325,10 @@ p.card-text{
   }
   .custom-link:hover, .text-link:hover {
     text-decoration: underline;
+    color: #ffd700;
   }
+
+  
 /* Prevent hover color change on carousel arrows */
 .carousel-control-prev:hover,
 .carousel-control-next:hover,
@@ -477,7 +336,9 @@ p.card-text{
 .carousel-control-next:focus {
   color: inherit !important; /* keeps Bootstrap’s default color */
   filter: none !important;   /* disables any color filter */
-  background: none !important; /* remove any hover background you added */
+  background-color: #ffd700; /* remove any hover background you added */
+  cursor: url(img/broken-soul-cursor.png), cell;
+
 }
  
 /* --- Make all carousel images the same height --- */
