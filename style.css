@@ -38,6 +38,10 @@ a { /*MAKE LINKS YELLOW */
     individually set*/
 }
 
+p {
+  font-size: 25px;
+}
+
 
 .flex-nav-items { /*for unordered list of items in navbar*/
   display: inline-flex;
@@ -450,9 +454,7 @@ i:hover {
   }
 
 /*-----------------------------------MUSIC PAGE----------------------------------*/
-p {
-  font-size: 25px;
-}
+
 
 #music-page-title {
   font-size: 80px;
