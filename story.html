@@ -11,6 +11,25 @@
 
 </head>
 <body class="body" style="background-color: rgb(0, 0, 0);">
+
+  <!--WARNING box-->
+  <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content shadow-lg">
+        <div class="modal-header">
+          <h5 class="modal-title" id="warningModalLabel">⚠️ Warning</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This tab contains spoilers for the game. Please proceed with caution.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <div class="container-lg">
 
        <!--Navbar-->
@@ -52,6 +71,8 @@
 
       <br>
       <br>
+
+
       <h1 class="title">UNDERTALE Timelines</h1>
 
       <p class="about">UNDERTALE has different timelines depending on the actions of the player. Although most events stay the same,
@@ -65,14 +86,12 @@
           <div class="main-timeline-2">
             <div class="timeline-2 left-2">
               <div class="card">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(135).webp" class="card-img-top"
-                  alt="Responsive image">
+                <img src="img/humans&monsters.jpg" class="card-img-top"
+                  alt="Humans & Monsters image">
                 <div class="card-body p-4">
-                  <h4 class="fw-bold mb-4">Ut enim ad minim veniam</h4>
-                  <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 2017</p>
-                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <h4 class="fw-bold mb-4">In the Beginning...</h4>
+                  <p class="text-muted mb-4"><i class="far fa-clock" aria-hidden="true"></i> 19XX </p>
+                  <p class="mb-0">In the beginning, two races lived in harmony; Humans and Monsters.</p>
                 </div>
               </div>
             </div>
@@ -143,11 +162,9 @@
 
       <h1 class="paths">All Paths</h1>
       <p class="links">
-        <a class="clink custom-link" style="font-size:25px;" href="pacifist.html">True Pacifist Timeline</a>
-        <br>
-        <a class="clink custom-link" style="font-size:25px;" href="neutral.html">Neutral Timeline</a>
-        <br>
-        <a class="clink custom-link" style="font-size:25px;" href="genocide.html">Genocide Timeline</a>
+        <a class="clink custom-link" style="font-size:25px; text-align: left; padding-right:30px;" href="pacifist.html">True Pacifist Timeline</a>
+        <a class="clink custom-link" style="font-size:25px; text-align:center; padding-right:30px;" href="neutral.html">Neutral Timeline</a>
+        <a class="clink custom-link" style="font-size:25px; text-align:right;" href="genocide.html">Genocide Timeline</a>
       </p>
 
 
@@ -167,6 +184,13 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      // Automatically show the modal when the tab loads
+      window.addEventListener('load', function() {
+        const myModal = new bootstrap.Modal(document.getElementById('warningModal'));
+        myModal.show();
+      });
+
+      //Cards fading in
       document.addEventListener("DOMContentLoaded", () => {
         const cards = document.querySelectorAll(".card");
       
