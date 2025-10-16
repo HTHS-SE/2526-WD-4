@@ -194,7 +194,7 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Asgore</h2>
-                <img src="GIFS/asgore_gif.webp" alt="Asgore GIF">
+                <img src="GIFS/asgore_gif.webp" alt="Asgore GIF" class="asgore-gif">
                 <h5>Role of Characetr</h5>
                 <ul>
                     <li>Facts about character</li>
@@ -207,7 +207,7 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Asriel</h2>
-                <img src="GIFS/asriel_gif.webp" alt="Asriel GIF">
+                <img src="GIFS/asriel_gif.webp" alt="Asriel GIF" class="asriel-gif">
                 <h5>Role of Characetr</h5>
                 <ul>
                     <li>Facts about character</li>
@@ -373,60 +373,83 @@
         }
     });
 
-    //Closing popup
-    document.querySelectorAll('.popup .close').forEach(closeBtn => {
-        closeBtn.addEventListener('click', event => {
-            event.preventDefault(); // stop scroll jump
+    (() => {
+    let lastScroll = 0;
 
-            const overlay = closeBtn.closest('.overlay');
-            if (!overlay) return;
+    // helper: show overlay with fade
+    function showOverlay(overlay) {
+    overlay.style.display = 'flex';
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'auto';
+    overlay.style.transition = 'opacity 0.25s ease';
+    // allow paint then fade in
+    requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+    }
 
-            // 1️⃣ Temporarily disable :target by removing the hash first
-            window.location.hash = ""; 
+    // helper: hide overlay with fade and restore scroll
+    function hideOverlay(overlay) {
+    overlay.style.transition = 'opacity 0.25s ease';
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+    setTimeout(() => {
+        overlay.style.display = 'none';
+        // restore scroll (use scrollTo for cross-browser)
+        window.scrollTo({ top: lastScroll, left: 0, behavior: 'instant' /* non-standard, falls back */ });
+        // clear inline styles we added (optional)
+        overlay.style.opacity = '';
+        overlay.style.transition = '';
+        overlay.style.pointerEvents = '';
+    }, 260);
+    }
 
-            // 2️⃣ Fade out the overlay
-            overlay.style.transition = "opacity 0.3s ease";
-            overlay.style.opacity = "0";
-            overlay.style.pointerEvents = "none";
-
-            // 3️⃣ After fade, clean inline styles
-            setTimeout(() => {
-            overlay.removeAttribute('style');
-            }, 350);
-        });
-    });
-    // Prevent page jump when opening popups
+    // Attach to links that open popups (href="#infoCard...")
     document.querySelectorAll('a[href^="#infoCard"]').forEach(link => {
-            link.addEventListener('click', event => {
-            event.preventDefault(); // stop jump
-            const targetId = link.getAttribute('href');
-            const overlay = document.querySelector(targetId);
-            if (!overlay) return;
+    link.addEventListener('click', function(e) {
+        e.preventDefault();              // prevent default hash jump
+        const targetId = this.getAttribute('href');
+        const overlay = document.querySelector(targetId);
+        if (!overlay) return;
 
-            // show the popup manually with fade-in
-            overlay.style.display = 'flex';
-            overlay.style.opacity = '0';
-            overlay.style.transition = 'opacity 0.3s ease';
-            requestAnimationFrame(() => {
-            overlay.style.opacity = '1';
-            });
-        });
+        // save current scroll position
+        lastScroll = window.scrollY || document.documentElement.scrollTop || 0;
+
+        // show overlay
+        showOverlay(overlay);
+
+        // Optionally push a history state so back button closes:
+        // history.pushState({popup: targetId}, '', targetId);
+    });
     });
 
-    // Smooth close animation without reopening
-    document.querySelectorAll('.popup .close').forEach(closeBtn => {
-        closeBtn.addEventListener('click', event => {
-            event.preventDefault();
-            const overlay = closeBtn.closest('.overlay');
-            if (!overlay) return;
-            overlay.style.transition = 'opacity 0.3s ease';
-            overlay.style.opacity = '0';
-            setTimeout(() => {
-            overlay.style.display = 'none';
-            overlay.style.opacity = '';
-            }, 300);
-        });
+    // Attach to every close button inside popups
+    document.querySelectorAll('.popup .close').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault(); // don't jump to top
+        const overlay = this.closest('.overlay');
+        if (!overlay) return;
+        hideOverlay(overlay);
+
+        // also clear the URL hash if you previously pushed one (not used above)
+        // history.replaceState(null, null, ' ');
     });
+    });
+
+    // If you want ESC to close overlays and restore scroll:
+    document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        const open = document.querySelector('.overlay[style*="display: flex"]');
+        if (open) hideOverlay(open);
+    }
+    });
+
+    // Optional: prevent the browser from auto-scrolling to an anchor if user loads page with a hash
+    if (location.hash && document.querySelector(location.hash)) {
+    // hide default jump on page load
+    window.scrollTo(0, 0);
+    history.replaceState(null, null, ' ');
+    }
+    })();
+
     </script>
 </body>
 </html>

@@ -335,3 +335,43 @@
 .carousel-item img {
   transition: all 0.4s ease-in-out;
 }
+
+/* Default popup GIF styling (applies to everyone) */
+.popup img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  
+  /* Asgore GIF only */
+  #infoCardAsgore .popup img.asgore-gif {
+    display: block;        /* avoid float behavior */
+    float: none !important;/* override float:left set earlier */
+    margin: 0 auto 1rem;   /* center horizontally inside popup */
+    width: auto;           /* allow width to grow/shrink naturally */
+    max-width: 110vw;       /* never exceed viewport width (keeps responsive) */
+    max-height: 90vh;      /* large height relative to viewport */
+    object-fit: contain;   /* preserve aspect ratio */
+  }
+
+    /* Asriel GIF only */
+  #infoCardAsriel .popup img.asriel-gif {
+    display: block;        /* avoid float behavior */
+    float: none !important;/* override float:left set earlier */
+    margin: 0 auto 1rem;   /* center horizontally inside popup */
+    width: auto;           /* allow width to grow/shrink naturally */
+    max-width: 110vw;       /* never exceed viewport width (keeps responsive) */
+    max-height: 90vh;      /* large height relative to viewport */
+    object-fit: contain;   /* preserve aspect ratio */
+  }
+  
+  /* smaller screens: reduce max-height so it fits nicely */
+  @media (max-width: 768px) {
+    #infoCardAsgore .popup img.asgore-gif {
+      max-height: 45vh;
+      max-width: 85vw;
+    }
+  }
