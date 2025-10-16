@@ -8,18 +8,21 @@
                 rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
                 crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
                 crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light">
+
+    <div class="container-lg">
+          <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <!--lg = large breakpoint, navbar-dark = light text-->
         <div class="container">
             <a href="index.html" class="navbar-brand" id="sans-logo">
-                <img src="img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top w-50">
+                <img src="img/sans-logo-gif.gif" alt="Sans image" class="d-inline-block align-text-top" id="sans-pic">
             </a>
                 
             <!--hamburger menu button-->
@@ -31,29 +34,30 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <!--links to hamburger menu button-->
                 <ul class="nav-item flex-nav-items navbar-nav ms-auto">
-                  <li class="nav-list-item">
-                    <a href="mech.html" class="nav-link hover-underline-animation">MECH</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="story.html" class="nav-link hover-underline-animation">STORY</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="characters.html" class="nav-link">CHARACTERS</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="music.html" class="nav-link hover-underline-animation">MUSIC</a>
-                  </li>
-                  <li class="nav-list-item">
-                      <a href="culture.html" class="nav-link hover-underline-animation">IMPACT</a>
-                  </li>
+                    <li class="nav-list-item">
+                        <a href="mech.html" class="nav-link-page">MECH</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="story.html" class="nav-link-page">STORY</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="characters.html" class="nav-link-page">CHARACTERS</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="music.html" class="nav-link-page">MUSIC</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="culture.html" class="nav-link-page">IMPACT</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <br> <br>
     <!--music tab title and copyright acknowledgment-->
     <section>
-        <h1>MUSIC</h1>
+        <h1 id="music-page-title">MUSIC</h1> <br>
         <p>
             All of the following songs are select tracks from the Undertale Original Soundtrack (OST). 
             The Undertale OST was composed by Toby Fox, the game's creator, 
@@ -61,6 +65,7 @@
             It is used here for non-commercial purposes as a part of the website, which is a school project.
         </p>
     </section>
+    <br>
 
     <!--song cards-->
     <section>
@@ -126,17 +131,21 @@
             </div>
         </div>
     </section>
+    <br> <br>
 
     <!--footer (need bootstrap icon)-->
-    <footer class="p-5 footer text-light text-center position-relative">
-        <div class="container">
-            <p class="lead">Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</p>
-            <p>Game by Toby Fox and Temmie Chang</p>
-            <p>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</p>
-            <a href="#" class="position-absolute bottom-0 end-0 p-5">
-                <i class="bi bi-caret-up-square h2 icon-white"></i>
-            </a>
-        </div>
-    </footer>
+       <footer class="p-5 footer text-light text-center position-relative">
+            <div class="container">
+                <h4>Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</h4>
+                <h4>Game by Toby Fox and Temmie Chang</h4>
+                <h4>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</h4>
+                <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                   <i class="bi bi-caret-up-square h2 icon-white" ></i>
+                </a>
+            </div>
+       </footer>
+
+</div>
+
 </body>
 </html>
