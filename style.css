@@ -221,6 +221,26 @@ i:hover {
 /*--------------------------------------Characters page---------------------------*/
 
 /*--------------------carousel*/
+/* Fade-in animation for entire carousel */
+.fade-in {
+  opacity: 0;
+  transform: scale(0.98);
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
 .carousel-item img {
     object-fit: cover;
     object-position: top center; /* or adjust: center bottom, etc. */
@@ -388,6 +408,46 @@ i:hover {
   }
   
 
+/*NOTE: MIGHT NEED TO REORGANIZE THIS*/
+/* Default popup GIF styling (applies to everyone) */
+.popup img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  
+  /* Asgore GIF only */
+  #infoCardAsgore .popup img.asgore-gif {
+    display: block;        /* avoid float behavior */
+    float: none !important;/* override float:left set earlier */
+    margin: 0 auto 1rem;   /* center horizontally inside popup */
+    width: auto;           /* allow width to grow/shrink naturally */
+    max-width: 110vw;       /* never exceed viewport width (keeps responsive) */
+    max-height: 90vh;      /* large height relative to viewport */
+    object-fit: contain;   /* preserve aspect ratio */
+  }
+
+    /* Asriel GIF only */
+  #infoCardAsriel .popup img.asriel-gif {
+    display: block;        /* avoid float behavior */
+    float: none !important;/* override float:left set earlier */
+    margin: 0 auto 1rem;   /* center horizontally inside popup */
+    width: auto;           /* allow width to grow/shrink naturally */
+    max-width: 110vw;       /* never exceed viewport width (keeps responsive) */
+    max-height: 90vh;      /* large height relative to viewport */
+    object-fit: contain;   /* preserve aspect ratio */
+  }
+  
+  /* smaller screens: reduce max-height so it fits nicely */
+  @media (max-width: 768px) {
+    #infoCardAsgore .popup img.asgore-gif {
+      max-height: 45vh;
+      max-width: 85vw;
+    }
+  }
 
 /*-----------------------------------MUSIC PAGE----------------------------------*/
 p {
@@ -442,98 +502,3 @@ p {
   grid-template-rows: 1fr 1fr;
 }
 
-/* ---------------------------------------Story page ------------------------------ */
-/* TIMELINE LINE + DOTS*/
-.timeline {
-  position: relative;
-  padding: 2rem 0;
-}
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  background: #fdd10d; /* yellow line */
-  transform: translateX(-50%);
-}
-.timeline-dot {
-  position: absolute;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background: #ffffff;
-  border: 4px solid #fd8d0d;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-
-/*  ARROW */
-/* Base style - remove the default summary arrow for all */
-summary {
-  list-style: none;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Left-side event keeps default arrow on the right */
-.timeline-event.left summary {
-  position: relative;
-  text-align: center;
-  cursor: url(img/broken-soul-cursor.png), cell; 
-}
-
-/* Right-side event: mirror layout (arrow inside, on the left) */
-.timeline-event.right summary {
-  position: relative;
-  text-align: center;
-  cursor: url(img/broken-soul-cursor.png), cell;
-}
-
-/* Custom arrow for right-side card */
-.timeline-event.right summary::before {
-  position: absolute;
-  left: 1.5rem;      /* adjust distance from edge */
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-
-}
-
-/* Slight padding to balance out arrow space so text stays centered */
-.timeline-event.right summary h4,
-.timeline-event.right summary h5 {
-  padding-left: 1.5rem;
-}
-
-a.clink {
-  display: inline-block;
-  padding: 40px 50px;
-}
-
-p.links{
-  text-align: center;
-}
-
-h1.paths{
-  text-align:center;
-  font-size: 60px;
-}
-
-h1.title{
-  text-align:center;
-  font-size:80px;
-}
-
-p.about{
-  font-size: 25px;
-}
-
-li{
-  font-size: 25px;
-}
