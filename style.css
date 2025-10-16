@@ -16,7 +16,6 @@
     cursor: url(img/cursor-heart.png), cell;
 }
 
-
 body {
     background-color: black;
     color: white;
@@ -328,7 +327,7 @@ i:hover {
     color: #ffd700;
   }
 
-  
+
 /* Prevent hover color change on carousel arrows */
 .carousel-control-prev:hover,
 .carousel-control-next:hover,
@@ -386,7 +385,11 @@ i:hover {
 
 /*-----------------------------------MUSIC PAGE----------------------------------*/
 p {
-  font-size: 18px;
+  font-size: 25px;
+}
+
+#music-page-title {
+  font-size: 80px;
 }
 
 .card {
