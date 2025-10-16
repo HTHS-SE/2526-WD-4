@@ -1,34 +1,350 @@
-/* --- TIMELINE LINE + DOTS --- */
-.timeline {
-  position: relative;
-  padding: 2rem 0;
+/*-------------------------General page setup---------------------------------*/
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    local("Pixel Operator"), local("pixel-operator-font"), local("pixel_operator"),
+    url(fonts/PixelOperator-Bold.ttf) format("opentype");
 }
-.timeline::before {
+
+@font-face /*font for buttons of navbar */{
+	font-family:Mercy;
+	src:url("fonts/MERCY.eot") format("eot"),url("fonts/MERCY.ttf") format("ttf"),url("fonts/MERCY.otf") format("opentype");
+}
+
+*{
+    font-family: "Pixel Operator";
+    cursor: url(img/cursor-heart.png), cell;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 20px 30px;
+  font-family: "Pixel Operator", sans-serif;
+  text-align:center;
+}
+
+/*sans logo a designated size*/
+#sans-pic {
+  width: 50px;
+  cursor: url(img/broken-soul-cursor.png), cell;
+}
+
+a { /*MAKE LINKS YELLOW */
+    color: yellow;
+    font-family:"Pixel Operator";
+    cursor: url(img/broken-soul-cursor.png), cell; /*when mouse hovered over links, the cursor changes
+    NOTE: some interactive parts of the site are not links, so they will have to have their cursors
+    individually set*/
+}
+
+
+.flex-nav-items { /*for unordered list of items in navbar*/
+  display: inline-flex;
+  list-style-type: none;
+  align-items: right;
+  font-size: 20px;
+}
+
+
+.nav-list-item { /*for each item in the navbar*/
+  margin: 0px 10px;
+  padding: 4px;
+  text-align: center;
+  align-content: center;
+  border: 4px solid #f07839;
+}
+
+.nav-list-item a { /*for the text inside each item of navbar*/
+  color: #f07839;
+  font-family: Mercy, "Pixel Operator";
+  font-size: 30px;
+}
+
+.nav-list-item:hover { /*for each item in the navbar when hovered over*/
+  border: 4px solid #ffff00;
+  
+}
+
+.nav-list-item a:hover { /*for text in each item in navbar when hovered over*/
+  color: #ffff00;
+}
+
+#navmenu { /*entire collapsible navbar*/
+  justify-content: right;
+  
+}
+
+.navbar-toggler { /*navbar button normal*/
+  border-color: #f4d488ff;
+  border-width: 4px;
+  border-radius: 0;
+  background-color: #f2b100;
+}
+
+button:hover { /* navbar button when hovered over*/
+  border-color: #cd6b01;
+  border-width: 4px;
+  border-radius: 0;
+  background-color: #fea912ff;
+}
+
+
+@media only screen and (max-width: 5000px) {
+  .flex-nav-items { /*for unordered list of items in navbar*/
+    display: flex;
+    list-style-type: none;
+    align-items: left;
+    font-size: 20px;
+  }
+}
+
+/* footer styling */
+.footer
+{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    color: white;
+    border: 4px solid white;
+    font-family: "Pixel Operator";
+}
+
+/*for the up button on the footer. when hovered over, it turns orange*/
+i:hover {
+  color: #f07839;
+  cursor: url(img/broken-soul-cursor.png), cell;
+}
+
+::selection {
+  background-color: #ffcc00; /* Yellow highlight color */
+  color: #ff0000; /* red text color */
+}
+
+/*_______________________________________________________________________*/
+
+/*Warning Box*/
+body {
+  background-color: #0a0a0a;
+  color: white;
+  text-align: center;
+}
+
+/* --- MODAL --- */
+.modal-dialog {
+  max-width: 400px;
+}
+
+.modal-content {
+  background-color: rgb(20, 20, 20);
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: white;
+
+}
+
+/* --- HEADER --- */
+.modal-header {
+  justify-content: center;
+  border-bottom: none;
+  position: relative;
+}
+
+.modal-header .btn-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  filter: invert(1);
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffcc00;
+  letter-spacing: 2px;
+}
+
+/* --- BODY + FOOTER --- */
+.modal-body {
+  font-size: 1rem;
+  padding: 20px;
+}
+
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+}
+
+.btn-primary {
+  background-color: #ffcc00;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 8px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #ffe680;
+  color: black;
+}
+
+/* --- BLURRED BACKDROP --- */
+.modal-backdrop.show {
+  backdrop-filter: blur(90px); /* main background blur */
+  background-color: rgb(0, 0, 0); /* darker overlay */
+}
+
+/*===============Timeline code===============*/
+h1.title{
+  font-size: 60px;
+}
+
+p.about{
+  font-size: 20px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2 {
+  position: relative;
+}
+
+/* The actual timeline (the vertical ruler) */
+.main-timeline-2::after {
   content: "";
   position: absolute;
+  width: 3px;
+  background-color: rgb(255, 163, 71);;
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 4px;
-  background: #0d6efd; /* blue line */
-  transform: translateX(-50%);
+  margin-left: -3px;
 }
-.timeline-dot {
+
+/* Container around content */
+.timeline-2 {
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-2::after {
+  content: "";
   position: absolute;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border: 4px solid #0d6efd;
+  width: 25px;
+  height: 25px;
+  right: -11px;
+  background-color: #e88700;
+  top: 15px;
   border-radius: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left-2 {
+  padding: 0px 40px 20px 0px;
+  left: 0;
+}
+
+/* Place the container to the right */
+.right-2 {
+  padding: 0px 0px 20px 40px;
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left-2::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right-2::before {
+  content: " ";
+  position: absolute;
+  top: 18px;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right-2::after {
+  left: -14px;
+}
+
+/* Media queries - Responsive timeline on screens less than 900px wide */
+@media screen and (max-width: 900px) {
+  /* Place the timelime to the left */
+  .main-timeline-2::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline-2 {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-2::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left-2::after,
+  .right-2::after {
+    left: 18px;
+  }
+
+  .left-2::before {
+    right: auto;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right-2 {
+    left: 0%;
+  }
+}
+
+/*ANIMATIONS*/
+
+/* TIMELINE FADE IN ON PAGE LOAD */
+.main-timeline-2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeTimeline 1.3s ease-out forwards;
+}
+
+@keyframes fadeTimeline {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
-/* --- STORY PAGE --- */
+/* Fade each card in as it becomes visible */
+.card {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
-
-.story-link{
-  font-size: 30px;
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
