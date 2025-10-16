@@ -8,14 +8,14 @@
                rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
                crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="style.css">
 
    <!--undertale font-->
    
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
-<body class="body">
+<body>
    <div class="container-lg">
 
     
@@ -25,7 +25,7 @@
         <!--lg = large breakpoint, navbar-dark = light text-->
         <div class="container">
             <a href="index.html" class="navbar-brand" id="sans-logo">
-                <img src="img/sans-logo-normal.png" alt="Sans image" class="d-inline-block align-text-top" id="sans-pic">
+                <img src="img/sans-logo-gif.gif" alt="Sans image" class="d-inline-block align-text-top" id="sans-pic">
             </a>
                 
             <!--hamburger menu button-->
@@ -58,34 +58,34 @@
     </nav>
 
     <br> <br>
-    
-    <div class="mechanics-page-intro">
-        <div class="judgement">
-            <img src="gifs/sans_battle_idle.gif" alt="sans."> <!--note: MAKE HIM BIGGER-->
-        </div>
-        <br>
-        <div class="dialogue-intro">
-            <img src="img/intro-t-1.png" alt="in undertale, you must spar against hostile enemies">
-            <br> <br>
-            <img src="img/intro-t-2.png" alt="each side alternates between one turn">
-            <br> <br>
-            <img src="img/intro-t-3.png" alt="the ending you get depends on your choices throughout the game">
-        </div>
 
+    <div class="mechanics-page-intro">
+        <div class="mech-sans">
+            <img src="img/sans-battle-idle.gif" alt="sans.">
+        </div>
         <br>
+        <div class="dialogue-intro"> <!--dialogue-intro-->
+            <img class="img-fluid" id="intro-t-1" src="img/intro-t-1.png" alt="in undertale, you must spar against hostile enemies">
+            <br> <br>
+            <img class="img-fluid" id="intro-t-2" src="img/intro-t-2.png" alt="each side alternates between one turn">
+            <br> <br>
+            <img class="img-fluid" id="intro-t-3" src="img/intro-t-3.png" alt="the ending you get depends on your choices throughout the game">
+        </div>
+        <br>
+        
         <div class="mech-button">
-            <div id="fight-button" class="mech-buttons">
-                <a href="fight.html"><img  src="img/fight_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
-            </div>
-            <div id="act-button" class="mech-buttons"> <!--MAKE INLINE-->
-                <a href="act.html"><img  src="img/act_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
-            </div>
-            <div id="items-button" class="mech-buttons"> <!--MAKE INLINE-->
-                <a href="items.html"><img  src="img/item_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
-            </div>
-            <div id="mercy-button" class="mech-buttons"> <!--MAKE INLINE-->
-                <a href="mercy.html"><img  src="img/mercy_sprite_button.jpg"></a> <!--NOTE CHANGE SIZING-->
-            </div>
+                <div id="fight-button" class="mech-buttons">
+                    <a href="fight.html"><img  src="img/FIGHT-sprite-button.jpg"></a> 
+                </div>
+                <div id="act-button" class="mech-buttons"> 
+                    <a href="act.html"><img  src="img/ACT-sprite-button.jpg"></a>
+                </div>
+                <div id="items-button" class="mech-buttons"> 
+                    <a href="items.html"><img  src="img/ITEM-sprite-button.jpg"></a> 
+                </div>
+                <div id="mercy-button" class="mech-buttons"> 
+                    <a href="mercy.html"><img  src="img/MERCY-sprite-button.jpg"></a> 
+                </div>
         </div>
     </div>
 

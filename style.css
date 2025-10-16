@@ -1,0 +1,506 @@
+/*-------------------------General page setup---------------------------------*/
+@font-face {
+  font-family: "Pixel Operator";
+  src:
+    local("Pixel Operator"), local("pixel-operator-font"), local("pixel_operator"),
+    url(fonts/PixelOperator-Bold.ttf) format("opentype");
+}
+
+@font-face /*font for buttons of navbar */{
+	font-family:Mercy;
+	src:url("fonts/MERCY.eot") format("eot"),url("fonts/MERCY.ttf") format("ttf"),url("fonts/MERCY.otf") format("opentype");
+}
+
+*{
+    font-family: "Pixel Operator";
+    cursor: url(img/cursor-heart.png), cell;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 20px 30px;
+  font-family: "Pixel Operator", sans-serif;
+  text-align:center;
+}
+
+/*sans logo a designated size*/
+#sans-pic {
+  width: 50px;
+  cursor: url(img/broken-soul-cursor.png), cell;
+}
+
+a { /*MAKE LINKS YELLOW */
+    color: yellow;
+    font-family:"Pixel Operator";
+    cursor: url(img/broken-soul-cursor.png), cell; /*when mouse hovered over links, the cursor changes
+    NOTE: some interactive parts of the site are not links, so they will have to have their cursors
+    individually set*/
+}
+
+p {
+  font-size: 25px;
+}
+
+
+.flex-nav-items { /*for unordered list of items in navbar*/
+  display: inline-flex;
+  list-style-type: none;
+  align-items: right;
+  font-size: 20px;
+}
+
+
+.nav-list-item { /*for each item in the navbar*/
+  margin: 0px 10px;
+  padding: 4px;
+  text-align: center;
+  align-content: center;
+  border: 4px solid #f07839;
+}
+
+.nav-list-item a { /*for the text inside each item of navbar*/
+  color: #f07839;
+  font-family: Mercy, "Pixel Operator";
+  font-size: 30px;
+}
+
+.nav-list-item:hover { /*for each item in the navbar when hovered over*/
+  border: 4px solid #ffff00;
+  
+}
+
+.nav-list-item a:hover { /*for text in each item in navbar when hovered over*/
+  color: #ffff00;
+}
+
+#navmenu { /*entire collapsible navbar*/
+  justify-content: right;
+  
+}
+
+.navbar-toggler { /*navbar button normal*/
+  border-color: #f4d488ff;
+  border-width: 4px;
+  border-radius: 0;
+  background-color: #f2b100;
+}
+
+button:hover { /* navbar button when hovered over*/
+  border-color: #cd6b01;
+  border-width: 4px;
+  border-radius: 0;
+  background-color: #fea912ff;
+}
+
+
+@media only screen and (max-width: 5000px) {
+  .flex-nav-items { /*for unordered list of items in navbar*/
+    display: flex;
+    list-style-type: none;
+    align-items: left;
+    font-size: 20px;
+}
+
+/* footer styling */
+.footer
+{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    color: white;
+    border: 4px solid white;
+    font-family: "Pixel Operator";
+}
+
+/*for the up button on the footer. when hovered over, it turns orange*/
+i:hover {
+  color: #f07839;
+  cursor: url(img/broken-soul-cursor.png), cell;
+}
+
+::selection {
+  background-color: #ffcc00; /* Yellow highlight color */
+  color: #ff0000; /* red text color */
+}
+
+/* ------------------------INDEX PAGE----------------------------------------*/
+.game-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#message-for-game {
+  display: none;
+}
+
+@keyframes shake{ /*a shaking animation like in undertale*/
+  0%{
+    transform: translateY(0)
+  }
+   
+  25%{
+    transform: translateY(5px);
+  }
+    
+  50%{
+    transform: translateY(-5px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .game-window {
+    display: none;
+  }
+
+  #message-for-game {
+    display: block;
+    color: red;
+    animation: shake 0.3s infinite;
+  }
+}
+
+/*---------------------------MECHANICS PAGE---------------------------------------*/
+
+.mech-buttons img {
+  width: 220px;
+  height: 84px;
+  cursor: url(img/broken-soul-cursor.png), cell;
+  margin: 20px;
+}
+
+.mech-buttons {
+  display: inline-block;
+  justify-content: space-between;
+  
+}
+
+.mech-buttons:hover {
+  filter: hue-rotate(20deg) brightness(180%);
+}
+
+/* The animation code for first text box : MOVING FROM LEFT TO RIGHT*/
+@keyframes myAnimation-i-1 {
+  from {transform: translateX(-100%);}
+  to {transform: translateX(0);}
+}
+
+/* animation applied to dialogue-intro first text box */
+#intro-t-1, #fight-t-2, #act-t-3, #items-t-1, #mercy-t-3 {
+  animation-name: myAnimation-i-1;
+  animation-duration: 1s;
+}
+
+/* The animation code for second text box : MOVING FROM RIGHT TO LEFT*/
+@keyframes myAnimation-i-2 {
+  from {transform: translateX(100%);}
+  to {transform: translateX(0);}
+}
+
+/* animation applied to dialogue-intro for second text box*/
+#intro-t-2, #fight-t-3, #act-t-1, #items-t-2, #mercy-t-2 {
+  animation-name: myAnimation-i-2;
+  animation-duration: 1s;
+
+}
+
+/* The animation code for third text box : MOVING FROM DOWN TO UP */
+@keyframes myAnimation-i-3 {
+  from {transform: translateY(100%);}
+  to {transform: translateY(0);}
+}
+
+/* animation applied to dialogue-intro for third text box*/
+#intro-t-3, #fight-t-1, #act-t-2, #mercy-t-1 {
+  animation-name: myAnimation-i-3;
+  animation-duration: 1s;
+}
+
+
+/*--------------------------------------Characters page---------------------------*/
+
+/*--------------------carousel*/
+/* Fade-in animation for entire carousel */
+.fade-in {
+  opacity: 0;
+  transform: scale(0.98);
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: top center; /* or adjust: center bottom, etc. */
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+/* --- Overlay container (dark background) --- */
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(3px);
+    z-index: 1050;
+    padding: 2rem;
+  }
+  
+  /* When the URL hash matches this overlay's ID */
+  .overlay:target {
+    display: flex;
+    animation: fadeOverlay 0.2s ease-in;
+  }
+  
+  @keyframes fadeOverlay {
+    from { opacity: 0 }
+    to   { opacity: 1 }
+  }
+  
+  /* --- Popup card --- */
+  .popup {
+    background: #0f0f0f;
+    color: #fff;
+    border-radius: 14px;
+    padding: 1.5rem;
+    max-width: 680px;
+    width: 95%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    position: relative;
+    text-align: left;
+    animation: popIn 0.25s cubic-bezier(.2,.8,.2,1);
+  }
+  
+  @keyframes popIn {
+    from { transform: scale(0.97); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+  }
+  
+/* Center popup content */
+.popup {
+    text-align: center;        /* centers text and inline elements like <img> */
+    display: flex;
+    flex-direction: column;    /* stack elements vertically */
+    align-items: center;       /* center them horizontally */
+    justify-content: center;   /* center them vertically (optional) */
+    padding: 20px;
+  }
+  
+  /* Optional: make the image a bit smaller and spaced nicely */
+  .popup img {
+    max-width: 80%;            /* keeps it from overflowing */
+    height: auto;
+    margin: 10px 0;
+  }
+  
+  /* Center the bullet list and remove side padding */
+  .popup ul {
+    list-style-position: inside; /* keeps bullets aligned with text */
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;          /* centers multi-line list items */
+  }
+
+  
+  /* --- Close button --- */
+  .popup .close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #fff;
+    cursor: url(img/broken-soul-cursor.png), cell;
+  }
+  .popup .close:hover { color: #ffd700; }
+  
+  /* --- Image formatting --- */
+  .popup img {
+    max-width: 160px;
+    height: auto;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 540px) {
+    .popup img { display: block; float: none; margin: 0 auto 1rem; }
+  }
+  
+  /* --- Link styles --- */
+  .custom-link, .text-link {
+    color: #ffd700;
+    text-decoration: none;
+  }
+  .custom-link:hover, .text-link:hover {
+    text-decoration: underline;
+    color: #ffd700;
+  }
+
+
+/* Prevent hover color change on carousel arrows */
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  color: inherit !important; /* keeps Bootstrap’s default color */
+  filter: none !important;   /* disables any color filter */
+  background-color: #ffd700; /* remove any hover background you added */
+  cursor: url(img/broken-soul-cursor.png), cell;
+
+}
+ 
+/* --- Make all carousel images the same height --- */
+.carousel-item img {
+    height: 90vh; /* or another height */
+    width: 100%;
+    object-fit: contain; /* keeps full image in frame */
+    background-color: black; /* fills empty space with black */
+  }
+  
+  
+  /* --- Transparent black background for captions --- */
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* black w/ 50% transparency */
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+  
+  /* Optional: make text stand out more */
+  .carousel-caption h5,
+  .carousel-caption p,
+  .carousel-caption a {
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Remove yellow hover color just in carousel links */
+  .carousel-caption a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+
+  #carouselExampleCaptions {
+    max-height: 40vh; /* Shrinks overall carousel height */
+    overflow: hidden; /* Hides image overflow */
+  }
+  
+  .carousel-item img {
+    height: 40vh; /* Matches carousel height */
+    object-fit: contain; /* Keeps full image visible */
+    background-color: black;
+  }
+  
+
+/*NOTE: MIGHT NEED TO REORGANIZE THIS*/
+/* Default popup GIF styling (applies to everyone) */
+.popup img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  
+  /* Asgore GIF only */
+  #infoCardAsgore .popup img.asgore-gif {
+    display: block;        /* avoid float behavior */
+    float: none !important;/* override float:left set earlier */
+    margin: 0 auto 1rem;   /* center horizontally inside popup */
+    width: auto;           /* allow width to grow/shrink naturally */
+    max-width: 110vw;       /* never exceed viewport width (keeps responsive) */
+    max-height: 90vh;      /* large height relative to viewport */
+    object-fit: contain;   /* preserve aspect ratio */
+  }
+
+    /* Asriel GIF only */
+  #infoCardAsriel .popup img.asriel-gif {
+    display: block;        /* avoid float behavior */
+    float: none !important;/* override float:left set earlier */
+    margin: 0 auto 1rem;   /* center horizontally inside popup */
+    width: auto;           /* allow width to grow/shrink naturally */
+    max-width: 110vw;       /* never exceed viewport width (keeps responsive) */
+    max-height: 90vh;      /* large height relative to viewport */
+    object-fit: contain;   /* preserve aspect ratio */
+  }
+  
+  /* smaller screens: reduce max-height so it fits nicely */
+  @media (max-width: 768px) {
+    #infoCardAsgore .popup img.asgore-gif {
+      max-height: 45vh;
+      max-width: 85vw;
+    }
+  }
+
+/*-----------------------------------MUSIC PAGE----------------------------------*/
+
+
+#music-page-title {
+  font-size: 80px;
+}
+
+.card {
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.nav-link-page {
+  text-decoration: none;
+  padding: 8px;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-gap: 20px 10px;
+}
+
+.desc-card {
+  padding: 10px;
+  border-width: 2px;
+}
+
+.play-button,
+.pause-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.play-button:hover,
+.play-button:focus:not(:active),
+.pause-button:hover,
+.pause-button:focus:not(:active) {
+  background-color: yellow;
+  color: black;
+  border-color: yellow;
+}
+
+.play-pause-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
