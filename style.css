@@ -93,16 +93,6 @@ button:hover { /* navbar button when hovered over*/
   background-color: #fea912ff;
 }
 
-
-@media only screen and (max-width: 5000px) {
-  .flex-nav-items { /*for unordered list of items in navbar*/
-    display: flex;
-    list-style-type: none;
-    align-items: left;
-    font-size: 20px;
-  }
-}
-
 /* footer styling */
 .footer
 {
@@ -458,7 +448,7 @@ i:hover {
 
 
 #music-page-title {
-  font-size: 60px;
+  font-size: 80px;
 }
 
 .card {
@@ -503,4 +493,9 @@ i:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+}
+
+/* culture tab */
+.culture-text {
+  font-size: 22px;
 }
