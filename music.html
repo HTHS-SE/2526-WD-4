@@ -75,6 +75,10 @@
                 <button class="play-button h1" onclick="
                     document.getElementById('megalovania').pause();
                     document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('his-theme').pause();
+                    document.getElementById('asgore').pause();
+                    document.getElementById('fallen-down').pause();
+                    document.getElementById('death-by-glamour').pause();
                     document.getElementById('undertale').play();
                 ">
                     <i class="bi bi-play-circle-fill"></i>
@@ -95,6 +99,10 @@
                 <button class="play-button h1" onclick="
                     document.getElementById('undertale').pause();
                     document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('his-theme').pause();
+                    document.getElementById('asgore').pause();
+                    document.getElementById('fallen-down').pause();
+                    document.getElementById('death-by-glamour').pause();
                     document.getElementById('megalovania').play();
                 ">
                     <i class="bi bi-play-circle-fill"></i>
@@ -107,14 +115,18 @@
             <div class="card desc-card h1"> <!--megalovania desc card-->
                 <h4>MEGALOVANIA</h4>
                 <h5>#100</h5>
-                <p>Perhaps the most recognizable track from Undertale. Plays in the genocide route during the Sans final battle.</p>
+                <p>Perhaps the most recognizable track from Undertale. Plays towards the end of the genocide route.</p>
             </div>
 
-            <audio id="hopes-and-dreams" src="audio/hopes-and-dreams.wav" preload="auto"></audio> <!--song 3 button-->
+            <audio id="hopes-and-dreams" src="audio/hopes-and-dreams.wav" preload="auto"></audio> <!--hopes-and-dreams button-->
             <div class="play-pause-stack">
                 <button class="play-button h1" onclick="
                     document.getElementById('undertale').pause();
                     document.getElementById('megalovania').pause();
+                    document.getElementById('his-theme').pause();
+                    document.getElementById('asgore').pause();
+                    document.getElementById('fallen-down').pause();
+                    document.getElementById('death-by-glamour').pause();
                     document.getElementById('hopes-and-dreams').play();
                 ">
                     <i class="bi bi-play-circle-fill"></i>
@@ -124,10 +136,106 @@
                 </button>
             </div>
 
-            <div class="card desc-card h1"> <!--desc card for song 3-->
+            <div class="card desc-card h1"> <!--hopes-and-dreams desc card-->
                 <h4>Hopes and Dreams</h4>
                 <h5>#087</h5>
-                <p>Plays in the true pacifist route as the protagonist speaks to Asriel Dreemurr.</p>
+                <p>Plays towards the end of the true pacifist route.</p>
+            </div>
+
+            <audio id="his-theme" src="audio/his-theme.m4a" preload="auto"></audio> <!--his-theme button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('asgore').pause();
+                    document.getElementById('fallen-down').pause();
+                    document.getElementById('death-by-glamour').pause();
+                    document.getElementById('his-theme').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('his-theme').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+            
+            <div class="card desc-card h1"> <!--his-theme desc card-->
+                <h4>His Theme</h4>
+                <h5>#090</h5>
+                <p>Plays in the pacifist route during a flashback about the First Human.</p>
+            </div>
+
+            <audio id="fallen-down" src="audio/fallen-down.m4a" preload="auto"></audio> <!--fallen-down button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('his-theme').pause();
+                    document.getElementById('asgore').pause();
+                    document.getElementById('death-by-glamour').pause();
+                    document.getElementById('fallen-down').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('fallen-down').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+            
+            <div class="card desc-card h1"> <!--fallen-down desc card-->
+                <h4>Fallen Down</h4>
+                <h5>#004</h5>
+                <p>Plays during multiple interactions with Toriel in different routes.</p>
+            </div>
+
+            <audio id="asgore" src="audio/asgore-2.m4a" preload="auto"></audio> <!--asgore button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('his-theme').pause();
+                    document.getElementById('fallen-down').pause();
+                    document.getElementById('death-by-glamour').pause();
+                    document.getElementById('asgore').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('asgore').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+            
+            <div class="card desc-card h1"> <!--asgore desc card-->
+                <h4>ASGORE</h4>
+                <h5>#077</h5>
+                <p>Plays on the neutral route during the battle with Asgore.</p>
+            </div>
+
+            <audio id="death-by-glamour" src="audio/death-by-glamour.m4a" preload="auto"></audio> <!--death-by-glamour button-->
+            <div class="play-pause-stack">
+                <button class="play-button h1" onclick="
+                    document.getElementById('undertale').pause();
+                    document.getElementById('hopes-and-dreams').pause();
+                    document.getElementById('megalovania').pause();
+                    document.getElementById('his-theme').pause();
+                    document.getElementById('fallen-down').pause();
+                    document.getElementById('asgore').pause();
+                    document.getElementById('death-by-glamour').play();
+                ">
+                    <i class="bi bi-play-circle-fill"></i>
+                </button>
+                <button class="pause-button h1" onclick="document.getElementById('death-by-glamour').pause();">
+                    <i class="bi bi-pause-circle-fill"></i>
+                </button>
+            </div>
+            
+            <div class="card desc-card h1"> <!--death-by-glamour desc card-->
+                <h4>Death by Glamour</h4>
+                <h5>#068</h5>
+                <p>Plays in the neutral and pacifist routes during the battle with Mettaton EX.</p>
             </div>
         </div>
     </section>
