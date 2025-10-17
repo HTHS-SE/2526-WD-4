@@ -345,7 +345,19 @@
     margin: 0 auto;
   }
 
-  
+
+  /* Papyrus GIF only */
+  #infoCardPapyrus .popup img.papyrus-gif {
+    display: block;        /* avoid float behavior */
+    float: none !important;/* override float:left set earlier */
+    margin: 0 auto 1rem;   /* center horizontally inside popup */
+    width: auto;           /* allow width to grow/shrink naturally */
+    max-width: 120vw;       /* never exceed viewport width (keeps responsive) */
+    max-height: 100vh;      /* large height relative to viewport */
+    object-fit: contain;   /* preserve aspect ratio */
+  }
+
+
   /* Asgore GIF only */
   #infoCardAsgore .popup img.asgore-gif {
     display: block;        /* avoid float behavior */
@@ -368,6 +380,14 @@
     object-fit: contain;   /* preserve aspect ratio */
   }
   
+    /* smaller screens: reduce max-height so it fits nicely */
+    @media (max-width: 768px) {
+        #infoCardPapyrus .popup img.papyrus-gif {
+          max-height: 45vh;
+          max-width: 85vw;
+        }
+    }
+
   /* smaller screens: reduce max-height so it fits nicely */
   @media (max-width: 768px) {
     #infoCardAsgore .popup img.asgore-gif {
@@ -375,3 +395,11 @@
       max-width: 85vw;
     }
   }
+
+    /* smaller screens: reduce max-height so it fits nicely */
+    @media (max-width: 768px) {
+        #infoCardAsriel .popup img.asriel-gif {
+            max-height: 45vh;
+            max-width: 85vw;
+        }
+    }

@@ -348,3 +348,21 @@ p.about{
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/*===Warning card===*/
+/* Keep the warning modal centered on all screen sizes */
+#warningModal .modal-dialog {
+  margin: 0 auto;                /* centers horizontally */
+  display: flex;
+  align-items: center;           /* centers vertically */
+  justify-content: center;       /* centers horizontally */
+  min-height: 100vh;             /* ensure vertical centering fills screen */
+}
+
+@media (max-width: 576px) {
+  #warningModal .modal-content {
+    width: 90vw;                 /* shrink content to fit small screens */
+    margin: 0 auto;
+  }
+}
