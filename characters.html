@@ -6,18 +6,16 @@
     <title>UNDERTALE-SE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css"> 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="style.css">
 
-    
 
 </head>
 <body class="body" style="background-color: rgb(0, 0, 0);">
     <div class="container-lg">
     
 
-      <!--Navbar-->
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <!--lg = large breakpoint, navbar-dark = light text-->
         <div class="container">
@@ -59,14 +57,15 @@
 
     <section>
         <h1 style="text-align: center; font-size:70px;">Characters</h1>
-        <h2 style="text-align: center;">Here are the main characters that you will meet throughout the game</h2>
+        <p style="text-align: center; font-size: 20px;">Scroll through to learn about the main characters you'll meet in the 
+        game. To learn more about them, click the link underneath their name.</p>
       <!-- ===== Popups ===== -->
         <!--Frisk (1)-->
         <div id="infoCardFrisk" class="overlay">
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Frisk</h2>
-                <img src="img/frisk-walking.webp" alt="Frisk GIF">
+                <img src="gifs/frisk-walking.webp" alt="Frisk GIF">
                 <h5>Protagonist</h5>
                 <ul>
                     <li>Character you play in the game</li>
@@ -81,14 +80,15 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Chara</h2>
-                <img src="img/chara-gif.gif" alt="Chara GIF">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/chara-dancing.gif" alt="Chara GIF" class="chara-gif">
+                <h5>Protagonist/Antagonist</h5>
                 <ul>
                     <li>First human to fall into the UNDERGROUND</li>
                     <li>
                         Only appears in the 
                         <a class="clink custom-link" style="font-size:25px;" href="genocide.html">Genocide Timeline</a>
                     </li>
+                    <li>Child to Asgore and Toriel Dreamur</li>
                 </ul>
             </div>
         </div>
@@ -98,7 +98,7 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Flowey</h2>
-                <img src="img/flowey-talking.webp" alt="Flowey GIF">
+                <img src="gifs/flowey-talking.webp" alt="Flowey GIF">
                 <h5>Antagonist</h5>
                 <ul>
                     <li>Manipulative and soulless</li>
@@ -114,7 +114,7 @@
                 <a class="close" href="#">&times;</a>
                 <h2>Toriel</h2>
                 <br>
-                <img src="img/toriel-overworld-sleeping.gif" alt="Toriel GIF">
+                <img src="gifs/toriel-overworld-sleeping.gif" alt="Toriel GIF">
                 <br>
                 <h5>Supporting Character</h5>
                 <ul>
@@ -130,10 +130,15 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Sans</h2>
-                <img src="img/sans-gif.gif" alt="Sans GIF">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/sans-gif.gif" alt="Sans GIF">
+                <h5>Supporting Character</h5>
                 <ul>
-                    <li>Facts about character</li>
+                    <li>
+                        Significant importantance  in 
+                        <a class="clink custom-link" style="font-size:25px;" href="genocide.html">Genocide Timeline</a>
+                    </li>
+                    <li>Loves to joke around</li>
+                    <li>Brother to Papyrus</li>
                 </ul>
             </div>
         </div>
@@ -143,10 +148,13 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Papyrus</h2>
-                <img src="img/undertale-papyrus.gif" alt="Papyrus GIF">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/undertale-papyrus.gif" alt="Papyrus GIF" class="papyrus-gif">
+                <h5>Supporting Character</h5>
                 <ul>
-                    <li>Facts about character</li>
+                    <li>Brother to Sans</li>
+                    <li>Loves pasta</li>
+                    <li>Dreams of going to the OVERWORLD</li>
+                    <li>Wants to join the Royal Gaurd</li>
                 </ul>
             </div>
         </div>
@@ -156,10 +164,12 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Undyne</h2>
-                <img src="img/undyne-gif.gif" alt="Undyne GIF">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/undyne-gif.gif" alt="Undyne GIF">
+                <h5>Supporting Character</h5>
                 <ul>
-                    <li>Facts about character</li>
+                    <li>Leader of the Royal Gaurd</li>
+                    <li>Dislikes Humans</li>
+                    <li>Trains Papyrus by cooking Pasta</li>
                 </ul>
             </div>
         </div>
@@ -169,10 +179,13 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Alphys</h2>
-                <img src="img/alphys-gif.gif" alt="Alphys GIF">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/alphys-gif.gif" alt="Alphys GIF">
+                <h5>Supporting Character</h5>
                 <ul>
-                    <li>Facts about character</li>
+                    <li>The Royal Scientist</li>
+                    <li>Loves anime</li>
+                    <li>Creator of Mettaton</li>
+                    <li>Very shy</li>
                 </ul>
             </div>
         </div>
@@ -182,10 +195,14 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Mettaton</h2>
-                <img src="img/mettaton-gif.gif" alt="Mettaton GIF">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/mettaton-gif.gif" alt="Mettaton GIF">
+                <h5>Supporting Characetr</h5>
                 <ul>
-                    <li>Facts about character</li>
+                    <li>Blood thristy for HUMANS</li>
+                    <li>Loves Drama</li>
+                    <li>#1 TV show in all of the UNDERGROUND</li>
+                    <li>Has his own Hotel</li>
+                    <li>Has a Human form</li>
                 </ul>
             </div>
         </div>
@@ -195,10 +212,12 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Asgore</h2>
-                <img src="img/asgore-gif.webp" alt="Asgore GIF" class="asgore-gif">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/asgore-gif.webp" alt="Asgore GIF" class="asgore-gif">
+                <h5>Supporting Character</h5>
                 <ul>
-                    <li>Facts about character</li>
+                    <li>Ruler of all the UNDERGROUND</li>
+                    <li>Divorced to Toriel</li>
+                    <li>Dislikes Humans because of what they did to his son</li>
                 </ul>
             </div>
         </div>
@@ -208,10 +227,12 @@
             <div class="popup">
                 <a class="close" href="#">&times;</a>
                 <h2>Asriel</h2>
-                <img src="img/asriel-gif.webp" alt="Asriel GIF" class="asriel-gif">
-                <h5>Role of Characetr</h5>
+                <img src="gifs/asriel-gif.webp" alt="Asriel GIF" class="asriel-gif">
+                <h5>Supporting Character</h5>
                 <ul>
-                    <li>Facts about character</li>
+                    <li>Biological son to Asgore and Toriel Dreamur</li>
+                    <li>SOUL stuck in Flowey</li>
+                    <li>Killed by Humans</li>
                 </ul>
             </div>
         </div>
@@ -350,14 +371,14 @@
        <!--footer (need bootstrap icon)-->
         <footer class="p-5 footer text-light text-center position-relative">
             <div class="container">
-                <h4>Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</h4>
-                <h4>Game by Toby Fox and Temmie Chang</h4>
-                <h4>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</h4>
+                <p class="lead">Copyright &copy; <a href="https://undertale.com/" target="_blank">UNDERTALE</a>&trade;</p>
+                <p>Game by Toby Fox and Temmie Chang</p>
+                <p>UNOFFICIAL Website by Diana Hong, Delaney Campos-Ramirez, and Elizabeth Whittle</p>
                 <a href="#" class="position-absolute bottom-0 end-0 p-5">
-                   <i class="bi bi-caret-up-square h2 icon-white" ></i>
+                <i class="bi bi-caret-up-square h2 icon-white"></i>
                 </a>
             </div>
-       </footer>
+        </footer>
 
         
        </div>
@@ -452,5 +473,5 @@
     })();
 
     </script>
-
+</body>
 </html>
