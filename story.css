@@ -144,6 +144,7 @@ body {
   right: 15px;
   top: 15px;
   filter: invert(1);
+  cursor: url(img/broken-soul-cursor.png), cell;
 }
 
 .modal-title {
@@ -177,6 +178,8 @@ body {
 .btn-primary:hover {
   background-color: #ffe680;
   color: black;
+  border-radius: 10px;
+  cursor: url(img/broken-soul-cursor.png), cell;
 }
 
 /* --- BLURRED BACKDROP --- */
